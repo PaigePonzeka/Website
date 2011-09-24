@@ -1,0 +1,338 @@
+body { 
+  background: #213843;
+  padding: 0;
+  color: #000000;
+  font-family: "Arial Black";
+  font-size: 14px;
+  text-align: left;
+}
+
+h1,h2,h3,h4,h5,h6 { 
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 26px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  font-weight: normal;
+  text-align: left;
+}
+
+a:visited
+{
+    color: #000000;
+}
+
+a { 
+  color: #5F524F;
+}
+
+#fullContainer { 
+    width: 772px;
+    background: #EFF3F6;
+	margin-left: auto;
+	margin-right: auto;
+    margin-top: 10px;
+   	border-width: 2px;
+	border-style: solid;
+	border-color: #000000;
+}
+
+#containerInside { 
+	background: #EFF3F6 url(images/bar_blue100_e.png) repeat-x;
+	position: relative;
+	top: -20px;
+}
+
+#containerInsideMain { 
+    width: 800px;
+	position: relative;
+	top: -20px;
+}
+
+#container { 
+    width: 750px;
+	height: 755px;
+    background: #EFF3F6 url(images/index_heading.jpg) no-repeat;
+    margin-top: 10px;
+    margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+   	border-width: 1px;
+	border-style: solid;
+	border-color: #000000;
+}
+
+#containern { 
+    width: 750px;
+    margin-top: 10px;
+    margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+   	border-width: 1px;
+	border-style: solid;
+	border-color: #000000;
+}
+
+#pageHeader { 
+  height: 180px;
+  padding: 20px 0 20px 20px;
+  font-size: 26px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  text-align: left;
+}
+
+#textBox {
+  margin: 0px 10px 0px 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+#header {
+	position: relative;
+	top: -20px;
+	left: 0px;
+	padding-top: 2px;
+	padding-right: 5px;
+	padding-bottom: 2px;
+	width: 745px;
+	text-transform: uppercase;
+	font-family: "Arial";
+	font-size: 9px;
+	color: #000000;
+	background: #4B6673;
+
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #000000;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;	
+
+	text-align: right;
+	/* background: url(images/box_transparent_e.png); */
+}
+
+#headerMain {
+	position: relative;
+	top: -220px;
+	left: 0px;
+	padding-top: 2px;
+    margin-left: 550px;
+	padding-right: 5px;
+	padding-bottom: 2px;
+	text-transform: uppercase;
+	font-family: "Arial Black";
+	font-size: 12px;
+	color: #000000;
+	text-align: right;
+	/* background: url(images/box_transparent_e.png); */
+}
+
+#menuList {
+	position: relative;
+	top: -20px;
+	left: 0px;
+	bottom: 80px;
+	font-size: 100%;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	width: 100px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: "Arial";
+	font-size: 12px;
+    float:left;	
+	text-align: left;
+	/*background: url(images/box_transparent_e.png);*/
+}
+
+#titleBox
+{
+	position: relative;
+    text-transform: uppercase;
+    font-size: 90%;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    margin-left: -10px;
+    font-weight: bold;
+	text-align: left;
+}
+
+#footer {
+	position: relative;
+	top: 20px;
+	left: 0px;
+	font-family: "Arial";
+	font-size: 9px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	width: 750px;
+	font-family: Georgia, Times, serif;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #000000;
+	text-align: center;
+}
+
+#allContainerServers {
+    margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: #AAAAAA;
+    width: 596px;
+	height: auto;
+	padding: 10px;
+	background-color: #404040;
+    overflow: hidden;
+	border: solid 2px #999a9b;
+}
+
+#allContainerStats {
+    margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: #AAAAAA;
+    width: 400px;
+	height: auto;
+	padding: 10px;
+	background-color: #404040;
+    overflow: hidden;
+	border: solid 2px #999a9b;
+}
+.servercont
+{
+    margin: 5px;
+	color: #CCCCCC;
+	width: 280px;
+	border: solid 2px #999a9b;
+	background-color: #141618;
+}
+.serverinfo, .serverplayer 
+{
+	clear: both;
+}
+.serverpheader, .serversheader, .serverpname, .serverpscore, .serverinfol, .serverinfor
+{
+	color: #CCCCCC;
+}
+.serverinfoc
+{
+	text-align: center;
+	border-bottom: solid 2px #999a9b;
+}
+.serverinfol
+{
+    padding-left: 5px;
+	text-align: left;
+	float: left;
+}
+.serverinfor
+{
+    padding-right: 5px;
+	text-align: right;
+	float: right;
+}
+.serverpheader, .serversheader
+{
+	text-align: center;
+	border-top: solid 2px #999a9b;
+	border-bottom: solid 2px #999a9b;
+}
+.serverpheader
+{
+    width: 218px;
+	float:left;		
+	text-align: center;
+	border-right: solid 2px #999a9b;	
+}
+.serversheader
+{
+    float: right;
+	width: 60px;
+}
+.serverpname
+{
+    width: 213px;
+    padding-left: 5px;
+	text-align: left;
+	float:left;	
+	border-right: solid 2px #999a9b;
+}
+.serverpscore
+{
+	text-align: right;
+	float: right;
+	width: 65px;
+}
+
+#nameContainer {
+    padding: 5px;
+	color: #CCCCCC;
+    height: auto;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+    background-color: #141618;
+    overflow: hidden;
+	border: solid 2px #999a9b;
+}
+
+#achvContainer {
+    margin-left: auto;
+	margin-right: auto;
+    width: 376px;
+	height: 300px;
+	clear: both;
+}
+.medal {
+    float: left;
+    padding: 5px;
+    width: 80px;
+    height: 25px;
+    background-color: #141618;
+    overflow: hidden;
+	border: solid 2px #999a9b;
+}
+.medalImg {
+    float:left;
+	width: 25px;
+	height: 25px;
+}
+.medalText {
+    padding-top: 2px;
+    text-align: right;
+    color: #CCCCCC;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#statsContainer {
+    padding: 5px;
+    width: 188px;
+	margin-left: auto;
+	margin-right: auto;
+    background-color: #141618;
+    overflow: hidden;
+	border: solid 2px #999a9b;
+}
+.stats {
+	height: 20px;
+}
+.statsTitle, .statsText
+{
+	color: #CCCCCC;
+	margin-top: auto;
+	margin-bottom: auto;
+}	
+.statsTitle {
+    float: left;
+    text-align: left;
+    
+}
+.statsText {
+    float: right;
+    text-align: right;
+}
+

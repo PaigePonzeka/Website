@@ -1,0 +1,125 @@
+
+#changingHeader{
+	background: #000000 url("../images/sunset.jpg");
+	height:150px;
+	width:750px;
+	
+}
+body{
+	background:#141608;
+}
+	/*WRAP*/
+#container {
+background : #eae9eb;
+color : #666;
+}
+
+			/*FOOTER*/
+#footer {
+border-top : 5px solid #c62f02;
+color : #fff;
+background : #000000;
+}
+
+#footer a:link, #footer a:visited {
+color : #eee;
+}
+#footer a:hover {
+color : #3da6fe;
+}
+#footer a:active {
+color : #ffffff;
+}
+
+/*Font Colors*/
+h2 {
+color : #c62f02;
+}
+h3 {
+color : #c62f02;
+}
+h1{
+	color:#000;
+}
+blockquote{
+color:#801e03;
+}
+
+
+/*Links*/
+a:link, a:visited {
+color:#e9680c;
+}
+
+a:hover {
+color : #000;
+}
+
+a:active {
+color : #aaa;
+}
+
+
+
+h2 {
+font : 150% georgia, Helvetica, "Trebuchet MS", Tahoma, sans-serif;
+letter-spacing : 5px;
+color : #160927;
+}
+
+/*Navigation Bar*/
+#nav_bar {
+    float:top;
+    margin:0px auto;
+    padding:0;
+    text-align:center;
+    width:750px;
+    height:30px;
+    overflow:hidden;
+}
+#home, #cast, #pictures, #videos, #mail {
+    float:left;
+    width:150px;
+    height:60px;
+    line-height:15px;
+    font-size:10px;
+    font-family:sans-serif;
+    color:#ffffff;
+    font-weight:bold;
+    border:0px solid white;
+    position:relative;
+}
+#nav_bar a:link, #nav_bar a:visited {
+	color:#CCC;
+}
+#nav_bar a:hover{
+	color:#fff;
+
+}
+#nav_bar h2 {
+    line-height:30px;
+    font-size:15px;
+    margin:0px;
+    padding:0px;
+	color:#fafcf6;
+}
+ 
+#nav_top, #nav_bottom {
+    height:30px;
+    float:top;
+}
+#home {
+    background:#29131F;
+}
+#cast {
+    background:#522125;
+}
+#pictures {
+    background:#7F2922;
+}
+#videos{
+    background:#C24D23;
+}
+#mail {
+    background:#DB7422;
+}

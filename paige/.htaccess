@@ -1,0 +1,10 @@
+
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 72.130.121.113

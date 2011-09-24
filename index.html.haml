@@ -1,0 +1,322 @@
+!!! Strict
+%html
+  %head
+    %title Ponzeka
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "Paige Ponzeka", :name => "description"}/
+    %meta{:content => "jquery, vertical, scrolling, scroll, smooth", :name => "keywords"}/
+    / StyleSheets
+    %link{:href => "stylesheets/style.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "stylesheets/global.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "stylesheets/isotope.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    / scripts at bottom of page
+    %link{:href => "./images/favicon.ico", :rel => "icon", :type => "image/png"}/
+    / The JavaScript
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js", :type => "text/javascript"}
+    %script{:src => "javascripts/jquery.easing.1.3.js", :type => "text/javascript"}
+  %body
+    #navigation
+      .reference
+        %ul.nav
+          %li
+            %a{:href => "#home"} Home
+          %li
+            %a{:href => "#about"} About Me
+          %li
+            %a{:href => "#work"} Work
+    #social_contact
+      .social_links
+        %ul#social.group
+          %li
+            %a{:href => "http://twitter.com/PaigeTPonzeka", :target => "_blank"}
+              %img{:src => "images/icons/twitter_32.png"}/
+          %li
+            %a{:href => "https://plus.google.com/104898766253674680721/posts", :target => "_blank"}
+              %img{:src => "images/icons/google_32.png"}/
+          %li
+            %a{:href => "http://hello.ponzeka.com", :target => "_blank"}
+              %img{:src => "images/icons/tumblr_32.png"}/
+          %li
+            %a{:href => "mailto:paigepon@gmail.com", :target => "_blank"}
+              %img{:src => "images/icons/email_32.png"}/
+    #home.section.black
+      %h1 Hello,
+      %h2 My Name is
+      %h3 Paige Ponzeka
+      %h4
+        I like to
+        = succeed "," do
+          %a{:href => ""} build
+        = succeed "," do
+          %a{:href => ""} create
+        = succeed "," do
+          %a{:href => ""} make
+        = succeed "," do
+          %a{:href => ""} explore
+        %a{:href => ""} share
+    #about.section.white
+      %h2 About Me
+      %p
+        I fell into the world of computers after watching my oldest brother build his computers. He had always been locked into the world of technology, he always had to have the latest and greatest and technology and the key to getting your money's worth out of such expensive technology is really knowing how to use it. He started teaching me everything I know. I would listen to him explain his computer as he assembled his new cooling fan or started a new build. I decided to build my first computer the summer after my Freshman year. After that I was hooked. I took Computer Science the following year. I had never programmed before in my life, but I knew and loved computers. My brother and I have gone down different paths. He's now a
+        %a.external{:href => "http://port25.wordpress.com/"} Senior System Engineer
+        and is doing well in the business world. I have pursued a career in creative realm and explored web and game development which, contrary to what many of our relatives think, is not at all the "same thing."
+    #work.section.black
+      %section#options.clearfix
+      %ul#filters.option-set.floated.clearfix
+        %li
+          %a.web_button{:href => "#web"} Develop
+        %li
+          %a.app_button{:href => "#app"} Program
+        %li
+          %a.research_button{:href => "#research"} Research
+        %li
+          %a.selected{:href => "#show-all"} Everything
+      /
+        <ul id="sort">
+        <li><a href="#original-order" class="selected asc"><img height="15px" width="15px" src="./images/icon_original.png" /></a></li>
+        <li><a href="#name"><img height="15px" width="15px" src="./images/icon_name.gif" /></a></li>
+        <li><a href="#category"><img height="15px" width="15px" src="./images/icon_category.png" /></a></li>
+        <li id="#shuffle"><a href="#shuffle"><img height="15px" width="15px" src="./images/icon_shuffle.png" /></a></li>
+        </ul>
+      / #options
+      #container.clickable.variable-sizes.clearfix
+        .element.web.metal{"data-category" => "web"}
+          %h3.symbol (^_~)
+          %h2.name Stats2V
+          %p.weight
+          .description
+            %p
+              A stats tracking database for a PC game. Used a program run on game servers to collect statistics. Front-end allowed players to view their stats and rankings. Used PHP, MySQL, HTML, CSS and Javascript.
+              %a.external{:href => "http://www.stats2v.ponzeka.com"} Visit the Site
+              %a.view_modal(data-title = "Stats2V" data-slide_count = '4' data-1_title ="Generate Player Card" data-1_description = "Players could generate a live updating PNG image using their gamertag. It included a live updating template and color options. <a href='http://stats2v.ponzeka.com/playerCard.php'>See It Here</a> " data-2_title= "Individual Stats" data-2_description = "Users could view individual stats and see charts comparing their strengths and weaknesses. <a href = 'http://stats2v.ponzeka.com/getstats.php?gamer=i4Ni+DiabloVix&submit=Submit'> Player Demo </a>" data-3_title="Individual Stats Page" data-3_description="Players could view general statistics." data-4_title = "Player Rankings" data-4_description ="See top player rankings in a variety of categories <a href='http://stats2v.ponzeka.com/rankings.php'> View Rankings") Details
+
+
+        .element.app.inner-transition{"data-category" => "app"}
+          %h3.symbol (¬_¬)
+          %h2.name Playlist Creator
+          .description
+            %p
+              This was a personal programming project using C# and Microsoft Visual Studio.
+              It was created for H2V Server Administrators for creating server playlists.
+              %a.download{:href => "./demos/PlaylistCreator.zip", :target => "_blank"} Download
+        .element.research.inner-transition{"data-category" => "research"}
+          %p.number
+          %h3.symbol >:(
+          %h2.name Intro to Motion Capture
+          %p.weight
+          .description
+            %p
+              This was a class that offered exploration into the Motion Capture process in Film and Programming Interactive Motion Capture applications.
+              %a.external{:href => "http://movement.nyu.edu/"} More Details Here
+        .element.app.inner-transition{"data-category" => "app"}
+          %p.number
+          %h3.symbol :-)
+          %h2.name VSU Database
+          %p.weight
+          .description
+            %p
+              A Collaborative project with the Social Workers at the Brooklyn DA's office.
+              We created an intensive Microsoft Access Database to store contact and statical information for Victims served.
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol <.<
+          %h2.name i4Ni Website
+          %p.weight
+          .description
+            %p
+              Installed, Customized and Maintained PHP3BB Forum software.
+              Also designed and programmed their website.
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol <.<
+          %h2.name [Pro]ject
+          %p.weight
+          .description
+            %p
+              A Collaborative Kinect Hack Motion Capture Project. Users' use their hands to Interact with Geometric Pieces.
+              %a{:href => "#"} DEMO VIDEO COMING SOON!
+        .element.app.inner-transition{"data-category" => "app"}
+          %p.number
+          %h3.symbol (\_/)
+          %h2.name Playlist Generator
+          %p.weight
+          .description
+            %p
+              This was a personal programming project using C# and Microsoft Visual Studio.
+              It was created for H2V Server Administrators for generating server playlists to be displayed to site visitors.
+              %a.download{:href => "./demos/PlaylistGenerator.zip", :target => "_blank"} Download
+        .element.web.inner-transition{"data-category" => "web"}
+          %h2.name Display Logic
+          %p.weight
+          .description
+            %p
+              Provided Webmaster duties for Display Logic Inc.
+              Created Web design, maintained website updates and provided on call webservices.
+              %a.external{:href => "http://www.displaylogic.com"} Link to the Live Website
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol ^_^
+          %h2.name Player Stats
+          %p.weight
+          .description
+            %p
+              Consisted of Player Leaderboard and Individual static lookups. *The Website is No Longer Active*
+              %a.external{:href => "http://www.ponzeka.com/demos/i4ni/gamertag.php?country=i4Ni+Joker&country_ID=&submit=Submit"} See the Demo
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol (~_^)
+          %h2.name Disrupto
+          %p.weight
+          .description
+            %p
+              Web Developer on various projects from Winter of 2011 to Present.
+              %a.external{:href => "http://disrupto.com"} Disrupto
+        .element.app.inner-transition{"data-category" => "app"}
+          %p.number
+          %h3.symbol (~_^)
+          %h2.name XML Converter
+          %p.weight
+          .description
+            %p
+              Created an XML Convert Application using Microsoft Visual Studio and C#.
+              Collected and uploaded individual game and player data collected from a Halo 2 Vista game server to an online MySQL database.
+        .element.research.inner-transition{"data-category" => "research"}
+          %p.number
+          %h3.symbol D=
+          %h2.name Shadow Monsters
+          %p.weight
+          .description
+            %p
+              A research project from The Museum of Modern Art on Philip Worthington's
+              Shadow Monsters.
+              Advised the Museum on dealing with current and future interactive pieces.
+        .element.research.inner-transition{"data-category" => "research"}
+          %p.number
+          %h3.symbol (>_>)
+          %h2.name OpenCV
+          %p.weight
+          .description
+            %p
+              Explored motion capture with web camera using OpenCV .
+              %a.external{:href => "http://www.youtube.com/watch?v=RFP7AtLPghs"} See the Drawing Game in Action.
+        .element.app.inner-transition{"data-category" => "app"}
+          %p.number
+          %h3.symbol :O
+          %h2.name Roster Updater
+          %p.weight
+          .description
+            %p
+              Created specifically for the i4Ni Clan Website.
+              It was an easy Roster Updater that connected and updated a MySQL server.
+              Created using Microsoft Visual Studio and C#.
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol :X
+          %h2.name Game Stats
+          %p.weight
+          .description
+            %p
+              An extensive game statistic database for the i4Ni Clan website.
+              It displayed a graphic and interactive view of popular maps and game types using
+              the Google Graph API.
+              %a.external{:href => "http://www.ponzeka.com/demos/i4ni/matches.php"} See the Demo
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol (0.o)
+          %h2.name Server Viewer
+          %p.weight
+          .description
+            %p
+              Using PHP, HTML, CSS and pre-generated text files created a live server viewer of remote Halo 2 Vista servers.
+        .element.app.inner-transition{"data-category" => "app"}
+          %p.number
+          %h3.symbol (^_^)
+          %h2.name HTML File Browser
+          %p.weight
+          .description
+            %p
+              For Personal Use, created an HTML file browser that transversed a folder and printed folder and
+              filenames along with links to the given file. *Application Unfinished*
+              %a.download{:href => "./demos/HTMLFileBrowser.zip", :target => "_blank"} Download
+        .element.research.inner-transition{"data-category" => "research"}
+          %p.number
+          %h3.symbol (-_-)
+          %h2.name Game Design Workshop
+          %p.weight
+          .description
+            %p
+              Studied the art of video game creation and the development process. Then worked in a team of 4 to create a Java Puzzle game.
+              Each group member took on a different role and eventually created:
+              %a{:href => "./demos/SubwaySqueeze/"} Subway Squeeze
+        .element.research.inner-transition{"data-category" => "research"}
+          %p.number
+          %h3.symbol (T_T)
+          %h2.name The Lovers
+          %p.weight
+          .description
+            %p
+              A research project from
+              The Museum of Modern Art
+              on Teiji Furuhashi's
+              Lovers.
+              Advised the Museum on dealing with current and future interactive pieces.
+        .element.research.inner-transition{"data-category" => "research"}
+          %p.number
+          %h3.symbol (^.^)
+          %h2.name iOS
+          %p.weight
+          .description
+            %p Installed, Customized and Maintained PHP3BB Forum software. Helped design and completely programmed their web site and addition web apps including a player roster, stats database, game database and server viewer.
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol (X_X)
+          %h2.name ShootOut!
+          %p.weight
+          .description
+            %p
+              Created Using Python and Pygames as part of a Final Class Project. It was a basic Shooter game.
+              %a.external{:href => "http://www.youtube.com/user/paigepon?feature=mhum#p/u/18/4rW5CDqX23E"} See the Game in Action
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol (*_*)
+          %h2.name Wordz
+          %p.weight
+          .description
+            %p
+              Created a typing game using HTML, Javascript and CSS.
+              %a{:href => "./demos/wordz/"} See the Demo
+
+
+
+    / Powering Isotope
+    %script{:src => "javascripts/jquery.isotope.min.js"}
+    %script{:src => "javascripts/fake-element.js"}
+    %script{:src => "javascripts/custom_isotope.js"}
+    %script{:src => "javascripts/global.js"}
+
+
+#modal_curtain.hide
+#modal.hide
+  #modal_toolbar
+    %h2 Project Title
+    #modal_close
+  #modal_buttons
+    #modal_buttons_previous
+    #modal_buttons_next
+  #modal_slides
+    %ul
+
+%ul#modal_templates.hide
+  %li
+    .modal_slide
+      %img
+      .modal_slide_description
+        %h3 title
+        %p description
+
+
+
+
+
+
+

@@ -1,0 +1,326 @@
+*
+  margin: 0
+  padding: 0
+
+/*Style for external links
+
+a.external
+  background: url(../images/external_link.png) no-repeat top right
+  padding: 0 20px 0 0
+
+body
+  background: #000
+  font-family: Century Gothic, sans-serif
+  font-size: 34px
+  overflow-x: hidden
+
+.section
+  margin: 0px
+  height: 4000px
+  width: 100%
+  float: left
+  /*text-shadow:1px 1px 2px #f0f0f0;
+
+#social_contact
+  z-index: 100
+  overflow: auto
+  overflow: -moz-scrollbars-none
+  display: inline-block
+
+.section h1 h2 h3
+  font-size: 35px
+  /*margin:20px 0px 0px 50px;
+
+/*Home Sections Styles
+
+#home
+  padding: 40px 0 0 50px
+  &.section
+    h1
+      color: #ccff00
+      font-size: 60px
+    h2
+      color: #9900FF
+      font-size: 60px
+    h3
+      color: #FF00CC
+      font-size: 60px
+    h4
+      color: #fff
+      font-size: 30px
+    p
+      margin: 20px 0px 0px 50px
+      width: 900px
+      font-size: 24px
+
+#about p
+  font-size: 20px
+  margin: 20px 80px
+
+#work
+  h3
+    color: #ccff00
+    font-size: 20px
+  ul
+    font-size: 14px
+    padding: 0
+    margin: 0
+    display: block
+    list-style: circle
+    li
+      color: #fff
+      font-size: 14px
+      padding: 0
+      margin: 0
+      display: block
+      float: none
+
+#education ul, #resume ul, #contact ul
+  font-size: 14px
+  padding: 0
+  margin: 0
+  display: block
+  list-style: circle
+  li
+    color: #000
+    font-size: 14px
+    padding: 0
+    margin: 0
+    display: block
+    float: none
+
+.black
+  color: #fff
+  background: black url(../images/green_vert.jpg) repeat-x bottom left
+  margin-top: 50px
+  padding-top: 50px
+
+.white
+  color: #000
+  background: #98ff05 url(../images/black_vert2.jpg) repeat-x bottom left
+  padding-top: 50px
+
+.section ul
+  list-style: none
+  margin: 20px 0px 0px 550px
+
+.black ul li
+  float: left
+  padding: 5px
+  margin: 5px
+  color: #98ff05
+  font-size: 28px
+  a
+    display: block
+    color: #fff
+    &:hover
+      text-decoration: none
+      color: #444
+
+.white ul li
+  float: left
+  padding: 5px
+  margin: 5px
+  color: #aaa
+  font-size: 28px
+  a
+    display: block
+    color: #222
+    &:hover
+      text-decoration: none
+      color: #bbb
+
+#navigation
+  z-index: 100
+  /*Clear fix
+  overflow: auto
+  overflow: -moz-scrollbars-none
+  display: inline-block
+  ul li
+    display: inline
+    z-index: 100
+    a
+      z-index: 100
+      color: #fff
+      font-size: 20px
+      &:hover
+        color: #333
+
+/*Social Networking Icon Styles
+
+#container
+  width: 960px
+  margin: 0 auto
+
+ul
+  margin: 0 auto
+  list-style: none
+  font-size: 0px
+
+#social
+  margin: 0
+  padding: 0
+  z-index: 100
+  li a
+    display: block
+    display: block
+    width: 30px
+    height: 32px
+    z-index: 100
+    -webkit-transition: -webkit-transform 0.4s ease-out
+    -moz-transition: -moz-transform 0.4s ease-out
+    transition: transform 0.4s ease-out
+    &:hover
+      -webkit-transform: rotateZ(360deg)
+      -moz-transform: rotateZ(360deg)
+      transform: rotateZ(360deg)
+
+/*Fixed Position Navigation Bar and Footer
+
+a
+  color: #fff
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+.reference
+  position: fixed
+  left: 10px
+  top: 10px
+  font-size: 13px
+  font-weight: bold
+  z-index: 1000px
+  a
+    color: #fff
+    text-shadow: 1px 1px 1px #000
+    padding-right: 20px
+    &:hover
+      color: #ddd
+      text-decoration: none
+
+.social_links
+  position: fixed
+  z-index: 100
+  left: 10px
+  bottom: 10px
+  font-size: 13px
+  font-weight: bold
+  a
+    color: #fff
+    text-shadow: 1px 1px 1px #000
+    padding-right: 20px
+    &:hover
+      color: #ddd
+      text-decoration: none
+
+ul#social li
+  float: left
+
+.hide
+  display: none!important
+
+#modal_curtain
+  width: 100%
+  height: 100%
+  background: rgba(255,255,255, 0.6)
+  z-index: 999
+  position: fixed
+  top: 0
+  left: 0
+  display: block
+
+#modal // width should be slightly bigger than #ul li items, except the height becaise it includes the buttons
+  position: fixed
+  top: 25%
+  left: 25%
+  width: 500px
+  height: 500px
+  background: #fff
+  z-index: 1000
+  margin: 0 auto
+  display: block
+
+  #modal_toolbar
+    height: 25px
+    width: 100%
+    background: rgba(255,255,255, 0.8)
+
+    h2
+      font-size: 18px
+      position: absolute
+      text-align: center
+      top: 0
+      z-index: 2000
+
+    #modal_close
+      width: 25px
+      height: 25px
+      background: url('../images/icon_close.png') no-repeat
+      position: absolute
+      top: 5px
+      right: 5px
+      z-index: 2000
+      cursor: pointer
+
+  #modal_buttons
+    height: 23px
+    position: absolute
+    top: 200px
+    z-index: 2000
+    width: 100%
+
+    #modal_buttons_previous
+      cursor: pointer
+      width: 23px
+      height: 34px
+      background: url('../images/icon_arrow_left.png') no-repeat
+      float: left
+
+    #modal_buttons_next
+      cursor: pointer
+      width: 23px
+      height: 34px
+      background:  url('../images/icon_arrow_right.png') no-repeat
+      float: right
+
+  #modal_slides //The width and height should be the same with #ul li items
+    overflow: hidden
+    position: relative
+    width: 500px
+    height: 500px
+    display: block
+    background: #000
+    z-index: 1999
+
+    ul // The width is the total width of #ul li items
+      position: relative
+      left: 0
+      top: 0
+      height: 500px
+      list-style: none
+      margin: 0
+      padding: 0
+      width: 5000px
+
+      li
+        position: relative
+        font-size: 20px
+        float: left
+        width: 500px
+        height: 500px
+        overflow: hidden
+
+        img
+          width: 100%
+
+        .modal_slide_description
+          position: absolute
+          bottom: 0
+          width: 100%
+          height: 90px
+          background: rgba(255,255,255, 0.5)
+
+          p
+            font-size: 14px
+
+

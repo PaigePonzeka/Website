@@ -1,0 +1,107 @@
+
+#changingHeader{
+	background: #000000 url("../images/morning.jpg");
+	height:150px;
+	width:750px;
+	
+}
+body{
+	background:#5c6360;
+}
+	/*WRAP*/
+#container {
+background : #eae9eb;
+color : #666;
+}
+
+			/*FOOTER*/
+#footer {
+border-top : 5px solid #fee268;
+color : #fff;
+background : #000000;
+}
+
+#footer a:link, #footer a:visited {
+color : #eee;
+}
+#footer a:hover {
+color : #bca67d;
+}
+#footer a:active {
+color : #ffffff;
+}
+
+/*Font Colors*/
+h2 {
+color : #616a66;
+}
+h3 {
+color : #616a66;
+}
+h1{
+	color:#5c6360;
+}
+
+
+/*Links*/
+a:link, a:visited {
+color:#836e57;
+}
+
+a:hover {
+color : #000000;
+}
+
+a:active {
+color : #aaa;
+}
+
+
+/*Navigation Bar*/
+#nav_bar {
+    float:top;
+    margin:0px auto;
+    padding:0;
+    text-align:center;
+    width:750px;
+    height:30px;
+    overflow:hidden;
+}
+#home, #cast, #pictures, #videos, #mail {
+    float:left;
+    width:150px;
+    height:60px;
+    line-height:15px;
+    font-size:10px;
+    font-family:sans-serif;
+    color:#ffffff;
+    font-weight:bold;
+    border:0px solid white;
+    position:relative;
+}
+#nav_bar h2 {
+    line-height:30px;
+    font-size:15px;
+    margin:0px;
+    padding:0px;
+}
+ 
+#nav_top, #nav_bottom {
+    height:30px;
+    float:top;
+}
+#home {
+    background:#dfba17;
+}
+#cast {
+    background:#facf11;
+}
+#pictures {
+    background:#ffdb38;
+}
+#videos{
+    background:#fee268;
+}
+#mail {
+    background:#feefac;
+}
