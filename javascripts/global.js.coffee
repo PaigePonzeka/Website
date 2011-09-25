@@ -1,5 +1,5 @@
 $(document).ready ->
-  speed = 5000
+  speed = 500
 
   item_width = $('#modal_slides li').outerWidth()
   left_value = item_width * (-1)
@@ -39,16 +39,19 @@ $(document).ready ->
     images_folder = 'images/projects/'
     $('#modal').removeClass('hide')
     $('#modal_curtain').removeClass('hide')
+    clearModal()
     # set title
     title = $(this).attr('data-title')
+    title = title.replace(/\s/g, '_')
+    console.log(title)
     $("#modal h2").html(title)
     slide_count = $(this).attr('data-slide_count')
     picture = ""
     for n in [1..slide_count]
-      console.log(n)
       picture = ""
       slide_description = $(this).attr("data-#{n}_description")
       slide_title = $(this).attr("data-#{n}_title")
+
       slide_picture = "#{images_folder}#{title}/#{n}.png"
       # if slide picture is set just use the old one
       if(slide_picture)
@@ -60,17 +63,11 @@ $(document).ready ->
         slide.find('p').html(slide_description)
         slide.find('img').attr('src', slide_picture)
         slide.appendTo('#modal_slides ul')
-        console.log(slide)
+
+# clears the modal and data
+clearModal= ->
+  $("#modal_slides ul").html("")
 
 
-  $('#modal_buttons_previous').click ->
-    console.log("previous")
-    #$('#modal_content').animate(
-    #  {marginLeft:'-500px'}, speed
-    #  )
 
-  $('#modal_buttons_next').click ->
-    console.log('next')
-    #$('#modal_content').animate(
-    #  {marginLeft:'500px'}, speed
-    #  )
+

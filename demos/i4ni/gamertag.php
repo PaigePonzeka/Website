@@ -3,12 +3,12 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>i4Ni-Player Card</title>
-    <link href="http://www.thei4niclan.com/subpage.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="subpage.css" rel="stylesheet" type="text/css" media="screen" />
     <?php require("meta.php");?>
 
 
 <?php require("body.php");?>
- 
+
 <?php require_once("navbar.php"); ?>
  <!-- end #header -->
 	<div id="page">
@@ -25,7 +25,7 @@
 
 // In case register_globals is disabled.
 $gamertag = $_GET['country'];
-    
+
 
 /* Performing SQL query */
 $query = "SELECT * FROM players WHERE gamertag='$gamertag'";
@@ -46,11 +46,11 @@ $imagesLocation="http://www.thei4niclan.com/images/medals/";
       }
 	  if($stats[3]!=0)
 	  {
-		  $killDeath=$stats[2] / $stats[3]; 
+		  $killDeath=$stats[2] / $stats[3];
 	  }
 	  else
 	  {
-		   $killDeath=$stats[2]; 
+		   $killDeath=$stats[2];
 	  }
 	  if($stats[2]!=0)
 	  {
@@ -60,8 +60,8 @@ $imagesLocation="http://www.thei4niclan.com/images/medals/";
 	  {
 		  $headshotKill=$stats[8];
 	  }
-	 
-	 
+
+
 //create images gif names array
 $imagesName[20]=array();
 	$imagesNames[0]="double.gif";
@@ -100,8 +100,8 @@ echo "<h2>$gamertag</h2>\n";
         		Deaths: $deaths<br />\n
         		Assists: $assists<br />\n
         		Headshots: $headshots</p>\n";
- 
-			
+
+
         	echo "<p>Kill/Death: $killDeath2</p>\n
         	<p>Headshot/Kill: $headshotKill2</p>\n";
 
@@ -129,7 +129,7 @@ echo "<h2>$gamertag</h2>\n";
         	</center>";*/
 			}else{
 echo '<higher>This Player Does Not Exist Please Check Your Input, Also Make Sure there are no Spaces Before the Name. <br /> </higher><a href="stats.html"> Click Here To Try Again</a>';
-} 
+}
   /* Free resultset */
   mysql_free_result($result);
 
@@ -138,21 +138,21 @@ mysql_close($link);
 
 ?>
 
-                      
 
-                      
+
+
 							</div>
 
 
-                      
 
-                           
+
+
 						</div>
 					</div>
-		
+
 				</div>
 				<!-- end #content -->
-				
+
 				<!-- end #sidebar -->
 				<div style="clear: both;">&nbsp;</div>
 			</div>

@@ -189,7 +189,7 @@ a
   top: 10px
   font-size: 13px
   font-weight: bold
-  z-index: 1000px
+  z-index: 1000
   a
     color: #fff
     text-shadow: 1px 1px 1px #000
@@ -229,15 +229,23 @@ ul#social li
   left: 0
   display: block
 
+.element
+  cursor: pointer
+
+//------------------------
+// File Modal
+//------------------------
+
 #modal // width should be slightly bigger than #ul li items, except the height becaise it includes the buttons
   position: fixed
-  top: 25%
-  left: 25%
+  top: 50%
+  left: 50%
+  margin-left: -250px
+  margin-top: -250px
   width: 500px
   height: 500px
   background: #fff
   z-index: 1000
-  margin: 0 auto
   display: block
 
   #modal_toolbar
@@ -271,15 +279,15 @@ ul#social li
 
     #modal_buttons_previous
       cursor: pointer
-      width: 23px
-      height: 34px
+      width: 50px
+      height: 50px
       background: url('../images/icon_arrow_left.png') no-repeat
       float: left
 
     #modal_buttons_next
       cursor: pointer
-      width: 23px
-      height: 34px
+      width: 50px
+      height: 50px
       background:  url('../images/icon_arrow_right.png') no-repeat
       float: right
 

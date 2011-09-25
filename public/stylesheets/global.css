@@ -183,7 +183,7 @@ a {
   top: 10px;
   font-size: 13px;
   font-weight: bold;
-  z-index: 1000px; }
+  z-index: 1000; }
   .reference a {
     color: white;
     text-shadow: 1px 1px 1px black;
@@ -223,15 +223,19 @@ ul#social li {
   left: 0;
   display: block; }
 
+.element {
+  cursor: pointer; }
+
 #modal {
   position: fixed;
-  top: 25%;
-  left: 25%;
+  top: 50%;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -250px;
   width: 500px;
   height: 500px;
   background: white;
   z-index: 1000;
-  margin: 0 auto;
   display: block; }
   #modal #modal_toolbar {
     height: 25px;
@@ -260,14 +264,14 @@ ul#social li {
     width: 100%; }
     #modal #modal_buttons #modal_buttons_previous {
       cursor: pointer;
-      width: 23px;
-      height: 34px;
+      width: 50px;
+      height: 50px;
       background: url("../images/icon_arrow_left.png") no-repeat;
       float: left; }
     #modal #modal_buttons #modal_buttons_next {
       cursor: pointer;
-      width: 23px;
-      height: 34px;
+      width: 50px;
+      height: 50px;
       background: url("../images/icon_arrow_right.png") no-repeat;
       float: right; }
   #modal #modal_slides {

@@ -21,8 +21,6 @@
           %li
             %a{:href => "#home"} Home
           %li
-            %a{:href => "#about"} About Me
-          %li
             %a{:href => "#work"} Work
     #social_contact
       .social_links
@@ -55,11 +53,7 @@
           %a{:href => ""} explore
         %a{:href => ""} share
     #about.section.white
-      %h2 About Me
-      %p
-        I fell into the world of computers after watching my oldest brother build his computers. He had always been locked into the world of technology, he always had to have the latest and greatest and technology and the key to getting your money's worth out of such expensive technology is really knowing how to use it. He started teaching me everything I know. I would listen to him explain his computer as he assembled his new cooling fan or started a new build. I decided to build my first computer the summer after my Freshman year. After that I was hooked. I took Computer Science the following year. I had never programmed before in my life, but I knew and loved computers. My brother and I have gone down different paths. He's now a
-        %a.external{:href => "http://port25.wordpress.com/"} Senior System Engineer
-        and is doing well in the business world. I have pursued a career in creative realm and explored web and game development which, contrary to what many of our relatives think, is not at all the "same thing."
+
     #work.section.black
       %section#options.clearfix
       %ul#filters.option-set.floated.clearfix
@@ -80,17 +74,107 @@
         </ul>
       / #options
       #container.clickable.variable-sizes.clearfix
-        .element.web.metal{"data-category" => "web"}
-          %h3.symbol (^_~)
+
+        -# Stats2v
+        .element.web{"data-category" => "web"}
           %h2.name Stats2V
-          %p.weight
           .description
             %p
               A stats tracking database for a PC game. Used a program run on game servers to collect statistics. Front-end allowed players to view their stats and rankings. Used PHP, MySQL, HTML, CSS and Javascript.
+
+              %a.view_modal(data-title = "Stats2V" data-slide_count = '4' data-1_title ="Generate Player Card" data-1_description = "Players could generate a live updating PNG image using their gamertag. It included a live updating template and color options. <a href='http://stats2v.ponzeka.com/playerCard.php'>See It Here</a> " data-2_title= "Individual Stats" data-2_description = "Users could view individual stats and see charts comparing their strengths and weaknesses. <a href = 'http://stats2v.ponzeka.com/getstats.php?gamer=i4Ni+DiabloVix&submit=Submit'> Player Demo </a>" data-3_title="Individual Stats Page" data-3_description="Players could view general statistics." data-4_title = "Player Rankings" data-4_description ="See top player rankings in a variety of categories <a href='http://stats2v.ponzeka.com/rankings.php'> View Rankings") More Details
+              %br
               %a.external{:href => "http://www.stats2v.ponzeka.com"} Visit the Site
-              %a.view_modal(data-title = "Stats2V" data-slide_count = '4' data-1_title ="Generate Player Card" data-1_description = "Players could generate a live updating PNG image using their gamertag. It included a live updating template and color options. <a href='http://stats2v.ponzeka.com/playerCard.php'>See It Here</a> " data-2_title= "Individual Stats" data-2_description = "Users could view individual stats and see charts comparing their strengths and weaknesses. <a href = 'http://stats2v.ponzeka.com/getstats.php?gamer=i4Ni+DiabloVix&submit=Submit'> Player Demo </a>" data-3_title="Individual Stats Page" data-3_description="Players could view general statistics." data-4_title = "Player Rankings" data-4_description ="See top player rankings in a variety of categories <a href='http://stats2v.ponzeka.com/rankings.php'> View Rankings") Details
+
+        -# Disrupto
+        .element.web{"data-category" => "web"}
+          %h2.name Disrupto
+          .description
+            %p
+              Worked at
+              %a.external(href="http://disrupto.com") Disrupto
+              a Digital Product Development Studio located in Flatiron, NY. See Some of the
+              %a.view_modal(data-title = "Disrupto" data-slide_count = '3' data-1_title ="KnicksNow" data-1_description = "A social site for fans of the New York Knicks basketball team. <a href='http://knicksnow.com'>See It Here</a> " data-2_title= "Blue Shirts United" data-2_description = "A Social site for fans of the New York Rangers Hockey team. <a href = 'http://blueshirtsunited.com'> See it Here </a>" data-3_title="Memberly" data-3_description="An application that helps people and businesses run their own subscriptions. <a href= 'http://member.ly'" ) Products
+
+        -# Shootout
+        .element.app{"data-category" => "app"}
+          %h2.name Shootout
+          .description
+            %p
+              Created as part of a class project, my first program developed in python.
+              %a.external(href="http://bit.ly/ogRKS2") Watch A Video
+              %a.view_modal(data-title = "Shootout" data-slide_count = '3' data-1_title ="Carnival" data-1_description = "The game was a carnival themed shooting game." data-2_title= "Time Limit" data-2_description = "The goal was to shoot down as many targets before time ended" data-3_title="Animations and Sounds" data-3_description="The game had carnival music and sound effects." ) Screenshots
+
+        -# Wordz
+        .element.web{"data-category" => "web"}
+          %h2.name Wordz
+          .description
+            %p
+              Created as part of a class project, my first program developed in javascript.
+              %a.external(href="http://ponzeka.com/demos/wordz/index.html") Play!
+              %br
+              %a.view_modal(data-title = "Wordz" data-slide_count = '3' data-1_title ="Objective" data-1_description = "Words would fall from the sky, the objective would be to type the words before it reached the city." data-2_title= "Palindromes" data-2_description = "Users would have to type Palindromes twice. The were indicated by blue and yellow flashing of colors." data-3_title="Music" data-3_description="The background music played as soon as the game started and typing created sounds." ) Screenshots
 
 
+        -# i4Ni
+        .element.web{"data-category" => "web"}
+          %h2.name i4Ni
+          .description
+            %p
+              Designed, created and implemented web presence of the i4Ni Gaming community. (no longer live)
+              %a.external(href="http://www.ponzeka.com/demos/i4ni/") Demo!
+              %br
+
+        -# MoMa_Research
+        .element.research{"data-category" => "research"}
+          %h2.name MoMa Research
+          .description
+            %p
+              Research and advised Museum of Modern Art curators on obtaining and storing current and future technical installations.
+
+        -# Playlist Creator
+        .element.app{"data-category" => "web"}
+          %h2.name Playlist Creator
+          .description
+            %p
+              Created in C# and visual studio, this application generated a playlist file used for server admins for the Halo 2 Vista PC game.
+              %br
+              %a.view_modal(data-title = "Playlist Creator" data-slide_count = '3' data-1_title ="Game Types" data-1_description = "Users select a starting game type and fill in data. Text file is generated on the right hand side." data-2_title= "Map Types" data-2_description = "Users then selected a game type from the drop down and added it to the text file." data-3_title="Customize" data-3_description="Minor color changing and customization for users." ) Screenshots
+              %br
+              %a.download(href="/demos/PlaylistCreator.zip") Download
+
+        -# Subway Squeeze
+        .element.app{"data-category" => "app"}
+          %h2.name Subway Squeeze
+          .description
+            %p
+              An application created with a game design team during the first Game Design Workshop at the NYU Game center.
+            %br
+            -#%a.view_modal(data-title = "i4Ni" data-slide_count = '4' data-1_title ="Objective" data-1_description = "Words would fall from the sky, the objective would be to type the words before it reached the city." data-2_title= "Palindromes" data-2_description = "Users would have to type Palindromes twice. The were indicated by blue and yellow flashing of colors." data-3_title="Music" data-3_description="The background music played as soon as the game started and typing created sounds." ) Screenshots
+
+        -# VSU Victim Database
+        .element.app{"data-category" => "app"}
+          %h2.name VSU Victim Database
+          .description
+            %p
+              An application created for the Victim's Services Unit at the Brooklyn DA's office. Used to track Victim's and statistics.
+              %br
+              %a.view_modal(data-title = "VSU Victim Database" data-slide_count = '3' data-1_title ="Search" data-1_description = "Search Victims in the Database by name, assigned counselor and docket number." data-2_title= "Main Screen" data-2_description = "Logging in counselors can see their latest cases and upcoming court dates. They can also search the database or input new data." ) Screenshots
+
+        -# Playlist Generator
+        .element.app{"data-category" => "app"}
+          %h2.name Playlist Generator
+          .description
+            %p
+              Created in C# and visual studio, this application generated a view file to of the playlist file ran on a Halo 2 Server.
+              %br
+              %a.view_modal(data-title = "Playlist Generator" data-slide_count = '2' data-1_title ="Same Data" data-1_description = "The Forum out put from the generated code." data-2_title= "Open a File" data-2_description = "Program could be run on an entire server or one a single playlist.") Screenshots
+              %br
+              %a.download(href="/demos/PlaylistGenerator.zip") Download
+
+
+
+      -#
         .element.app.inner-transition{"data-category" => "app"}
           %h3.symbol (¬_¬)
           %h2.name Playlist Creator
