@@ -1,0 +1,618 @@
+/* Start: Recommended Isotope styles
+
+.isotope-item
+  z-index: 2
+
+.isotope-hidden.isotope-item
+  pointer-events: none
+  z-index: 1
+
+/**** Isotope CSS3 transitions ***
+
+.isotope
+  -webkit-transition-duration: 0.8s
+  -moz-transition-duration: 0.8s
+  transition-duration: 0.8s
+  .isotope-item
+    -webkit-transition-duration: 0.8s
+    -moz-transition-duration: 0.8s
+    transition-duration: 0.8s
+    -webkit-transition-property: -webkit-transform, opacity
+    -moz-transition-property: -moz-transform, opacity
+    transition-property: transform, opacity
+  -webkit-transition-property: height, width
+  -moz-transition-property: height, width
+  transition-property: height, width
+
+  /* End: Recommended Isotope styles
+
+  /**** disabling Isotope CSS3 transitions ***
+
+  .isotope
+    &.no-transition
+      -webkit-transition-duration: 0s
+      -moz-transition-duration: 0s
+      transition-duration: 0s
+      .isotope-item
+        -webkit-transition-duration: 0s
+        -moz-transition-duration: 0s
+        transition-duration: 0s
+    &.infinite-scrolling
+      -webkit-transition: none
+      -moz-transition: none
+      transition: none
+
+/* disable CSS transitions for containers with infinite scrolling
+
+/**** Base styles ***
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+  a img
+    border: none
+
+  /**** Isotope styles ***
+
+  /* required for containers to inherit vertical size from window
+
+  html, body
+    height: 100%
+
+#container
+  border: 0px solid #666
+  padding: 0px
+  margin-bottom: 20px
+
+.element
+  width: 110px
+  height: 110px
+  margin: 5px
+  float: left
+  overflow: hidden
+  position: relative
+  background: #888
+  color: #222
+  &.web
+    background: #eee
+    background: hsl(100%, 100%, 100%)
+  &.app
+    background: #ccc
+    background: hsl(100%, 100%, 100%)
+  &.research
+    background: #aaa
+    background: hsl(100%, 100%, 100%)
+
+  &:hover
+    opacity: 0.8
+  *
+    margin: 0
+  .symbol
+    left: 0.2em
+    top: 0.4em
+    position: absolute
+    font-size: 2.0em
+    display: none
+    line-height: 1.0em
+    color: #FFF
+  &.large .symbol
+    font-size: 3.0em
+    display: none
+  &.fake .symbol
+    color: #000
+    display: none
+  .name
+    font-size: .6em
+    text-align: center
+    background-size: cover
+    width: 100%
+    height: 100%
+
+    .action
+      display: block
+      font-size: 11px
+      color: #eee
+
+  .weight
+    font-size: 0.7em
+    left: 0.5em
+    bottom: 0.5em
+    display: none
+  .number
+    display: none
+    font-size: 1.25em
+    font-weight: bold
+    color: hsla(0, 0%, 0%, 0.5)
+    right: 0.5em
+    top: 0.5em
+
+/*Values to change
+
+.variable-sizes .element
+  &.width2
+    width: 230px
+  &.height2
+    height: 230px
+  &.width2.height2
+    font-size: 1.8
+
+.variable-sizes .element.large
+  font-size: 2.0em
+  width: 100%
+  height: 450px
+  z-index: 99
+  &.width2.height2
+    font-size: 2.0em
+    width: 350px
+    height: 350px
+    z-index: 99
+
+.description
+  padding: 25px
+  left: 0.2em
+  top: 0.4em
+  display: none
+
+  .image-container
+    width: 100%
+    height: 330px
+
+    li
+      height: 100%
+      width: auto
+
+  img 
+    height: 100%
+    display: inherit
+    margin: 0 auto
+
+.element .description p
+  font-size: 16px
+  width: 100%
+  margin-bottom: 10px
+
+
+span.twitter
+
+.element
+  .description a
+    text-decoration: underline
+    color: #000
+    &:hover
+      text-decoration: none
+  &.large 
+    .name
+      position: static
+      text-align: center
+      margin-top: 10px
+
+      .action 
+        display: none
+
+    .description
+      display: block
+
+      .clickable .element:hover
+        cursor: pointer
+        h3
+          text-shadow: 0 0 10px white,     0 0 10px white
+        p
+          text-shadow: 0 0 5px white,     0 0 5px white
+        h2
+          color: white
+
+/**** Example Options ***
+
+#options
+  padding-bottom: 1.0em
+  h3
+    margin-bottom: 0.2em
+  ul
+    margin: 0
+    list-style: none
+    padding-left: 50px
+
+.title
+  display: inline
+  font-size: 30px
+
+h2.title, h3.title
+  border-bottom-style: double
+  border-bottom-width: medium
+
+#options
+  ul ul
+    margin-left: 1.5em
+  .floated li
+    float: left
+  li a
+    display: inline-block
+    color: #222
+    font-weight: bold
+    font-size: 20px
+    &:hover
+      background-color: #fba540
+    &.web_button:hover
+      background-color: #eee
+    &.app_button:hover
+      background-color: #ccc
+    &.research_button:hover
+      background-color: #aaa
+    &.games_button:hover
+      background-color: #888
+    &.social_button:hover
+      background-color: #666
+    &.classes_button:hover
+      background-color: #444
+    &:active
+      background-color: #fa7b2a
+  .floated li a
+    margin-left: 10px
+    border-radius: 7px
+  .option-set li a.selected
+    background-color: #0d0b0c
+    text-shadow: none
+    color: white
+  #sort
+    float: right
+    li
+      display: inline
+
+/*Value to Change
+
+/*default hover over
+
+/*Hover over buttons to change
+
+/*Hovers over to change
+
+/*Value to Change
+
+/**** Horizontal ***
+
+.horizontal #container
+  height: 80%
+
+#copy
+  max-width: 640px
+
+/**** Photo demo ***
+
+.photos .photo
+  width: 320px
+  margin: 5px
+  float: left
+  img
+    display: block
+    width: 100%
+/**** Docs ***
+
+body.doc
+  max-width: 640px
+
+.doc
+  #content
+    margin-bottom: 20px
+  a:hover
+    border-bottom: 1px dotted
+
+body.doc
+  margin-left: 220px
+
+.doc nav
+  width: 210px
+  position: fixed
+  left: 10px
+  top: 0px
+  padding-top: 20px
+  height: 100%
+  overflow: auto
+  h1
+    margin-top: 0
+
+    body.doc
+      margin-left: 0px
+
+    .doc nav
+      width: auto
+      position: relative
+      left: auto
+      top: auto
+      padding-top: 0px
+      height: auto
+      margin-bottom: 20px
+
+/**** Doc page nav ***
+
+body.doc
+  margin-left: 0px
+
+.doc nav
+  width: auto
+  position: relative
+  left: auto
+  top: auto
+  padding-top: 0px
+  height: auto
+  margin-bottom: 20px
+
+/**** Doc page nav ***
+
+#docs-nav h1
+  font-size: 19px
+  margin-bottom: 0.5em
+  a
+    color: #4FB
+
+#demo-nav a
+  color: #4FB
+
+#docs-nav h1 a:hover
+  color: #4BF
+
+#demo-nav
+  a:hover
+    color: #4BF
+  font-size: 16px
+  font-weight: bold
+  padding-bottom: 0.5em
+  margin-bottom: 0.5em
+  border-bottom: 1px solid #333
+
+#docs-nav ul
+  list-style: none
+  margin: 0
+  font-weight: bold
+  a
+    display: block
+    border: none
+    padding: 1px 5px
+  .current a
+    background: hsla(0, 0%, 0%, 0.3)
+    color: #1BF
+  a:hover
+    color: white
+  .current
+    a:hover
+      color: white
+    .toc a
+      font-size: 12px
+      padding-left: 1.2em
+      font-weight: normal
+
+/**** Doc content ***
+
+.doc
+  h2, footer
+    border-top: 1px solid #333
+    padding-top: 0.8em
+  h2:target
+    padding: 10px
+    background: white
+    color: #222
+  h3
+    color: #FEC
+    background: hsla(0, 0%, 75%, 0.05)
+    padding: 2px 0.5em
+    margin-bottom: 0.5em
+    font-size: 1.15em
+  h4
+    margin-bottom: 0.5em
+    font-size: 14px
+
+footer
+  font-size: 12px
+  border-top: 1px solid #333
+  padding-top: 0.8em
+
+pre
+  padding: 10px
+  background: black
+  color: white
+
+code
+  background: black
+  color: white
+
+.doc #content
+  code
+    font-size: 12px
+  pre
+    line-height: 1.6em
+
+h3#options
+  padding-bottom: 0
+
+.option-def dl
+  dt, dd
+    float: left
+    padding: 0 1.2em
+    background: #161616
+    line-height: 36px
+    height: 36px
+  &.header
+    dt, dd
+      background: #444
+  .option-type
+    font-size: 13px
+    color: #AAA
+    font-style: italic
+  dd
+    border-left: 1px solid #222
+
+/* Tagline
+
+.doc
+  .tagline
+    font-size: 22px
+    font-weight: 300
+  .as-is
+    font-size: 95%
+  #commercial
+    background: white
+    padding: 10px
+    font-size: 14px
+    color: #1F1F1D
+    a
+      font-weight: bold
+
+/* as-is from MIT
+
+/* Commercial license blurb
+
+/**** Pygments ***
+
+code
+  .s1, .s
+    color: #78BD55
+  .mi, .cp, .kc
+    color: #5298D4
+  .k
+    color: #E39B79
+  .kd, .na
+    color: #A9D866
+  .p
+    color: #EDB
+  .o
+    color: #F63
+  .nb
+    color: #AA97AC
+  .c, .c1
+    color: #666
+    font-style: italic
+  .nt
+    color: #A0C8FC
+  .nf
+    color: #9EA8B8
+  .nc
+    color: #A78352
+  .m
+    color: #DE8E50
+  .nd
+    color: #9FAD7E
+
+/* string
+
+/*boolean
+/* keyword
+
+/* markup attribute
+/* punctuation
+/* operator
+/* support
+
+/* comment
+
+/* Markup open tag
+
+/* css id
+/* CSS class
+/* CSS value
+/* CSS pseudo selector
+
+#super-list
+  list-style: none
+  margin: 0
+  padding: 0
+  margin-bottom: 40px
+  li
+    display: inline-block
+    float: left
+    font-size: 28px
+    line-height: 1.2em
+    margin: 2px
+    font-weight: 300
+    &.feature
+      background: #111
+    span
+      display: block
+      padding: 0.2em 0.5em
+    a
+      display: block
+      padding: 0.2em 0.5em
+      color: #222
+    &.doc a
+      background: #3CF
+    &.demo a
+      background: #FC3
+    &.link a
+      background: #E58
+      color: white
+    a:hover
+      background: white
+    &.link a:hover
+      color: #222
+  &.masonry li
+    width: 216px
+    &.feature, &.link
+      width: 436px
+
+#infscr-loading
+  position: fixed
+  bottom: 30px
+  left: 42%
+  z-index: 99
+  background: white
+  background: hsla(0, 0%, 100%, 0.9)
+  padding: 20px
+  color: #222
+  font-size: 15px
+  font-weight: bold
+  -webkit-border-radius: 10px
+  -moz-border-radius: 10px
+  border-radius: 10px
+
+.external
+  padding-right: 15px
+  background: url('../images/icon_external.png') no-repeat right top
+
+.download
+  padding-right: 15px
+  background: url('../images/icon_download.png') no-repeat right top
+
+.clearfix
+  &:before
+    content: "\0020"
+    display: block
+    height: 0
+    visibility: hidden
+  &:after
+    content: "\0020"
+    display: block
+    height: 0
+    visibility: hidden
+    clear: both
+  zoom: 1
+
+footer
+  width: 500px
+  a
+    color: #000
+
+ul.social_footer
+  list-style: none
+  display: inline
+  li
+    display: inline
+    a
+      display: inline-block
+      width: 20px
+      height: 20px
+      z-index: 10
+      -webkit-transition: -webkit-transform 0.4s ease-out
+      -moz-transition: -moz-transform 0.4s ease-out
+      transition: transform 0.4s ease-out
+      &:hover
+        -webkit-transform: rotateZ(360deg)
+        -moz-transform: rotateZ(360deg)
+        transform: rotateZ(360deg)
+
+/* line 37

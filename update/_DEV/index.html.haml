@@ -1,0 +1,436 @@
+!!! Strict
+%html
+  %head
+    %title Ponzeka
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "Paige Ponzeka is a freelance Web Developer based out of New York City, this is her Resume and Contact information.", :name => "description"}/
+    %meta{:content => "Paige, Ponzeka, Developer, Freelance, Web Development, Resume, Paige Ponzeka", :name => "keywords"}/
+    / StyleSheets
+    %link{:href => "stylesheets/style.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "stylesheets/global.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "stylesheets/isotope.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "./images/favicon.ico", :rel => "icon", :type => "image/png"}/
+
+  %body
+    #navigation
+      .reference
+        %ul.nav
+          %li
+          %li
+            %a{:href => "#home"} Homes
+            %a{:href => "#work"} Work
+    -#social_contact
+      .social_links
+        %ul#social.group
+          %li
+            %a{:href => "http://twitter.com/PaigeTPonzeka", :target => "_blank"}
+              %img{:src => "images/icons/twitter_32.png"}/
+          %li
+            %a{:href => "https://plus.google.com/104898766253674680721/posts", :target => "_blank"}
+              %img{:src => "images/icons/google_32.png"}/
+          %li
+            %a{:href => "http://hello.ponzeka.com", :target => "_blank"}
+              %img{:src => "images/icons/tumblr_32.png"}/
+          %li
+            %a{:href => "mailto:paigepon@gmail.com", :target => "_blank"}
+              %img{:src => "images/icons/email_32.png"}/
+    #home.section.black
+      %h1 Hello,
+      %h2 My Name is
+      %h3 Paige Ponzeka
+      %h4 and I use technology to make people's lives easier.
+
+    #about.section.white
+      %p 
+        I currently work full time as a developer for
+        %a{:href=>"http://yext.com"}
+          Yext.
+
+    #work.section.black
+      %section#options.clearfix
+      %ul#filters.option-set.floated.clearfix
+        %li
+          %a.web_button{:href => "#web"} Web
+        %li
+          %a.app_button{:href => "#app"} App
+        %li
+          %a.research_button{:href => "#research"} Research
+        %li
+          %a.selected{:href => "#show-all"} Contact
+
+        %li 
+          <-- (Click to Sort)
+      /
+        <ul id="sort">
+        <li><a href="#original-order" class="selected asc"><img height="15px" width="15px" src="./images/icon_original.png" /></a></li>
+        <li><a href="#name"><img height="15px" width="15px" src="./images/icon_name.gif" /></a></li>
+        <li><a href="#category"><img height="15px" width="15px" src="./images/icon_category.png" /></a></li>
+        <li id="#shuffle"><a href="#shuffle"><img height="15px" width="15px" src="./images/icon_shuffle.png" /></a></li>
+        </ul>
+      / #options
+      #container.clickable.variable-sizes.clearfix.js-workitems-container
+      -##container.clickable.variable-sizes.clearfix
+        -# Stats2v
+        .element.web{"data-category" => "web"}
+          %h2.name Stats2V
+          .description
+            %p
+              A stats tracking database for a PC game. Used a program run on game servers to collect statistics. Front-end allowed players to view their stats and rankings. Used PHP, MySQL, HTML, CSS and Javascript.
+
+              %a.view_modal(data-title = "Stats2V" data-slide_count = '4' data-1_title ="Generate Player Card" data-1_description = "Players could generate a live updating PNG image using their gamertag. It included a live updating template and color options. <a href='http://stats2v.ponzeka.com/playerCard.php'>See It Here</a> " data-2_title= "Individual Stats" data-2_description = "Users could view individual stats and see charts comparing their strengths and weaknesses. <a href = 'http://stats2v.ponzeka.com/getstats.php?gamer=i4Ni+DiabloVix&submit=Submit'> Player Demo </a>" data-3_title="Individual Stats Page" data-3_description="Players could view general statistics." data-4_title = "Player Rankings" data-4_description ="See top player rankings in a variety of categories <a href='http://stats2v.ponzeka.com/rankings.php'> View Rankings") More Details
+              %br
+              %a.external{:href => "http://www.stats2v.ponzeka.com"} Visit the Site
+
+        -# Disrupto
+        .element.web{"data-category" => "web"}
+          %h2.name Disrupto
+          .description
+            %p
+              Worked at
+              %a.external(href="http://disrupto.com") Disrupto
+              a Digital Product Development Studio located in Flatiron, NY. See Some of the
+              %a.view_modal(data-title = "Disrupto" data-slide_count = '3' data-1_title ="KnicksNow" data-1_description = "A social site for fans of the New York Knicks basketball team. <a href='http://knicksnow.com'>See It Here</a> " data-2_title= "Blue Shirts United" data-2_description = "A Social site for fans of the New York Rangers Hockey team. <a href = 'http://blueshirtsunited.com'> See it Here </a>" data-3_title="Memberly" data-3_description="An application that helps people and businesses run their own subscriptions. <a href= 'http://member.ly'" ) Products
+
+        -# Shootout
+        .element.app{"data-category" => "app"}
+          %h2.name Shootout
+          .description
+            %p
+              Created as part of a class project, my first program developed in python.
+              %a.external(href="http://bit.ly/ogRKS2") Watch A Video
+              %a.view_modal(data-title = "Shootout" data-slide_count = '3' data-1_title ="Carnival" data-1_description = "The game was a carnival themed shooting game." data-2_title= "Time Limit" data-2_description = "The goal was to shoot down as many targets before time ended" data-3_title="Animations and Sounds" data-3_description="The game had carnival music and sound effects." ) Screenshots
+
+        -# Wordz
+        .element.web{"data-category" => "web"}
+          %h2.name Wordz
+          .description
+            %p
+              Created as part of a class project, my first program developed in javascript.
+              %a.external(href="http://ponzeka.com/demos/wordz/index.html") Play!
+              %br
+              %a.view_modal(data-title = "Wordz" data-slide_count = '3' data-1_title ="Objective" data-1_description = "Words would fall from the sky, the objective would be to type the words before it reached the city." data-2_title= "Palindromes" data-2_description = "Users would have to type Palindromes twice. The were indicated by blue and yellow flashing of colors." data-3_title="Music" data-3_description="The background music played as soon as the game started and typing created sounds." ) Screenshots
+
+
+        -# i4Ni
+        .element.web{"data-category" => "web"}
+          %h2.name i4Ni
+          .description
+            %p
+              Designed, created and implemented web presence of the i4Ni Gaming community. (no longer live)
+              %a.external(href="http://www.ponzeka.com/demos/i4ni/") Demo!
+              %br
+
+        -# MoMa_Research
+        .element.research{"data-category" => "research"}
+          %h2.name MoMa Research
+          .description
+            %p
+              Research and advised Museum of Modern Art curators on obtaining and storing current and future technical installations.
+
+        -# Playlist Creator
+        .element.app{"data-category" => "web"}
+          %h2.name Playlist Creator
+          .description
+            %p
+              Created in C# and visual studio, this application generated a playlist file used for server admins for the Halo 2 Vista PC game.
+              %br
+              %a.view_modal(data-title = "Playlist Creator" data-slide_count = '3' data-1_title ="Game Types" data-1_description = "Users select a starting game type and fill in data. Text file is generated on the right hand side." data-2_title= "Map Types" data-2_description = "Users then selected a game type from the drop down and added it to the text file." data-3_title="Customize" data-3_description="Minor color changing and customization for users." ) Screenshots
+              %br
+              %a.download(href="/demos/PlaylistCreator.zip") Download
+
+        -# Subway Squeeze
+        .element.app{"data-category" => "app"}
+          %h2.name Subway Squeeze
+          .description
+            %p
+              An application created with a game design team during the first Game Design Workshop at the NYU Game center.
+            %br
+            -#%a.view_modal(data-title = "i4Ni" data-slide_count = '4' data-1_title ="Objective" data-1_description = "Words would fall from the sky, the objective would be to type the words before it reached the city." data-2_title= "Palindromes" data-2_description = "Users would have to type Palindromes twice. The were indicated by blue and yellow flashing of colors." data-3_title="Music" data-3_description="The background music played as soon as the game started and typing created sounds." ) Screenshots
+
+        -# VSU Victim Database
+        .element.app{"data-category" => "app"}
+          %h2.name VSU Victim Database
+          .description
+            %p
+              An application created for the Victim's Services Unit at the Brooklyn DA's office. Used to track Victim's and statistics.
+              %br
+              %a.view_modal(data-title = "VSU Victim Database" data-slide_count = '3' data-1_title ="Search" data-1_description = "Search Victims in the Database by name, assigned counselor and docket number." data-2_title= "Main Screen" data-2_description = "Logging in counselors can see their latest cases and upcoming court dates. They can also search the database or input new data." ) Screenshots
+
+        -# Playlist Generator
+        .element.app{"data-category" => "app"}
+          %h2.name Playlist Generator
+          .description
+            %p
+              Created in C# and visual studio, this application generated a view file to of the playlist file ran on a Halo 2 Server.
+              %br
+              %a.view_modal(data-title = "Playlist Generator" data-slide_count = '2' data-1_title ="Same Data" data-1_description = "The Forum out put from the generated code." data-2_title= "Open a File" data-2_description = "Program could be run on an entire server or one a single playlist.") Screenshots
+              %br
+              %a.download(href="/demos/PlaylistGenerator.zip") Download
+
+
+
+      -#
+        .element.app.inner-transition{"data-category" => "app"}
+          %h3.symbol (¬_¬)
+          %h2.name Playlist Creator
+          .description
+            %p
+              This was a personal programming project using C# and Microsoft Visual Studio.
+              It was created for H2V Server Administrators for creating server playlists.
+              %a.download{:href => "./demos/PlaylistCreator.zip", :target => "_blank"} Download
+        .element.research.inner-transition{"data-category" => "research"}
+          %p.number
+          %h3.symbol >:(
+          %h2.name Intro to Motion Capture
+          %p.weight
+          .description
+            %p
+              This was a class that offered exploration into the Motion Capture process in Film and Programming Interactive Motion Capture applications.
+              %a.external{:href => "http://movement.nyu.edu/"} More Details Here
+        .element.app.inner-transition{"data-category" => "app"}
+          %p.number
+          %h3.symbol :-)
+          %h2.name VSU Database
+          %p.weight
+          .description
+            %p
+              A Collaborative project with the Social Workers at the Brooklyn DA's office.
+              We created an intensive Microsoft Access Database to store contact and statical information for Victims served.
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol <.<
+          %h2.name i4Ni Website
+          %p.weight
+          .description
+            %p
+              Installed, Customized and Maintained PHP3BB Forum software.
+              Also designed and programmed their website.
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol <.<
+          %h2.name [Pro]ject
+          %p.weight
+          .description
+            %p
+              A Collaborative Kinect Hack Motion Capture Project. Users' use their hands to Interact with Geometric Pieces.
+              %a{:href => "#"} DEMO VIDEO COMING SOON!
+        .element.app.inner-transition{"data-category" => "app"}
+          %p.number
+          %h3.symbol (\_/)
+          %h2.name Playlist Generator
+          %p.weight
+          .description
+            %p
+              This was a personal programming project using C# and Microsoft Visual Studio.
+              It was created for H2V Server Administrators for generating server playlists to be displayed to site visitors.
+              %a.download{:href => "./demos/PlaylistGenerator.zip", :target => "_blank"} Download
+        .element.web.inner-transition{"data-category" => "web"}
+          %h2.name Display Logic
+          %p.weight
+          .description
+            %p
+              Provided Webmaster duties for Display Logic Inc.
+              Created Web design, maintained website updates and provided on call webservices.
+              %a.external{:href => "http://www.displaylogic.com"} Link to the Live Website
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol ^_^
+          %h2.name Player Stats
+          %p.weight
+          .description
+            %p
+              Consisted of Player Leaderboard and Individual static lookups. *The Website is No Longer Active*
+              %a.external{:href => "http://www.ponzeka.com/demos/i4ni/gamertag.php?country=i4Ni+Joker&country_ID=&submit=Submit"} See the Demo
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol (~_^)
+          %h2.name Disrupto
+          %p.weight
+          .description
+            %p
+              Web Developer on various projects from Winter of 2011 to Present.
+              %a.external{:href => "http://disrupto.com"} Disrupto
+        .element.app.inner-transition{"data-category" => "app"}
+          %p.number
+          %h3.symbol (~_^)
+          %h2.name XML Converter
+          %p.weight
+          .description
+            %p
+              Created an XML Convert Application using Microsoft Visual Studio and C#.
+              Collected and uploaded individual game and player data collected from a Halo 2 Vista game server to an online MySQL database.
+        .element.research.inner-transition{"data-category" => "research"}
+          %p.number
+          %h3.symbol D=
+          %h2.name Shadow Monsters
+          %p.weight
+          .description
+            %p
+              A research project from The Museum of Modern Art on Philip Worthington's
+              Shadow Monsters.
+              Advised the Museum on dealing with current and future interactive pieces.
+        .element.research.inner-transition{"data-category" => "research"}
+          %p.number
+          %h3.symbol (>_>)
+          %h2.name OpenCV
+          %p.weight
+          .description
+            %p
+              Explored motion capture with web camera using OpenCV .
+              %a.external{:href => "http://www.youtube.com/watch?v=RFP7AtLPghs"} See the Drawing Game in Action.
+        .element.app.inner-transition{"data-category" => "app"}
+          %p.number
+          %h3.symbol :O
+          %h2.name Roster Updater
+          %p.weight
+          .description
+            %p
+              Created specifically for the i4Ni Clan Website.
+              It was an easy Roster Updater that connected and updated a MySQL server.
+              Created using Microsoft Visual Studio and C#.
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol :X
+          %h2.name Game Stats
+          %p.weight
+          .description
+            %p
+              An extensive game statistic database for the i4Ni Clan website.
+              It displayed a graphic and interactive view of popular maps and game types using
+              the Google Graph API.
+              %a.external{:href => "http://www.ponzeka.com/demos/i4ni/matches.php"} See the Demo
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol (0.o)
+          %h2.name Server Viewer
+          %p.weight
+          .description
+            %p
+              Using PHP, HTML, CSS and pre-generated text files created a live server viewer of remote Halo 2 Vista servers.
+        .element.app.inner-transition{"data-category" => "app"}
+          %p.number
+          %h3.symbol (^_^)
+          %h2.name HTML File Browser
+          %p.weight
+          .description
+            %p
+              For Personal Use, created an HTML file browser that transversed a folder and printed folder and
+              filenames along with links to the given file. *Application Unfinished*
+              %a.download{:href => "./demos/HTMLFileBrowser.zip", :target => "_blank"} Download
+        .element.research.inner-transition{"data-category" => "research"}
+          %p.number
+          %h3.symbol (-_-)
+          %h2.name Game Design Workshop
+          %p.weight
+          .description
+            %p
+              Studied the art of video game creation and the development process. Then worked in a team of 4 to create a Java Puzzle game.
+              Each group member took on a different role and eventually created:
+              %a{:href => "./demos/SubwaySqueeze/"} Subway Squeeze
+        .element.research.inner-transition{"data-category" => "research"}
+          %p.number
+          %h3.symbol (T_T)
+          %h2.name The Lovers
+          %p.weight
+          .description
+            %p
+              A research project from
+              The Museum of Modern Art
+              on Teiji Furuhashi's
+              Lovers.
+              Advised the Museum on dealing with current and future interactive pieces.
+        .element.research.inner-transition{"data-category" => "research"}
+          %p.number
+          %h3.symbol (^.^)
+          %h2.name iOS
+          %p.weight
+          .description
+            %p Installed, Customized and Maintained PHP3BB Forum software. Helped design and completely programmed their web site and addition web apps including a player roster, stats database, game database and server viewer.
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol (X_X)
+          %h2.name ShootOut!
+          %p.weight
+          .description
+            %p
+              Created Using Python and Pygames as part of a Final Class Project. It was a basic Shooter game.
+              %a.external{:href => "http://www.youtube.com/user/paigepon?feature=mhum#p/u/18/4rW5CDqX23E"} See the Game in Action
+        .element.web.inner-transition{"data-category" => "web"}
+          %p.number
+          %h3.symbol (*_*)
+          %h2.name Wordz
+          %p.weight
+          .description
+            %p
+              Created a typing game using HTML, Javascript and CSS.
+              %a{:href => "./demos/wordz/"} See the Demo
+
+    - # Code for Rendering an Element Partial for work Items
+    %script#work-item-template{:type => "text/x-handlebars-template"}
+      :plain
+        {{#each items}}
+          <div class="element {{#each tags}}{{this}}{{/each}}">
+            <div class="name" style="background-image:url('./images/examples/{{images.[0]}}')">
+
+              <h2>
+                {{name}}
+                <span class="action">(Click to Read More)</span>
+              </h2>
+            </div>
+            <div class="description">
+              <p>
+                {{description}}
+
+                {{#if images}}
+                  <ul class="image-container">
+                    {{#each images}}
+                      <li>
+                        <img src="./images/examples/{{this}}"/>
+                      </li>
+                    {{/each}}
+                  </ul>
+                {{/if}}
+              </p>
+
+            </div>
+          </div>
+        {{/each}}
+    %script{:src => "https://code.jquery.com/jquery-3.1.1.min.js", :type => "text/javascript"}
+    %script{:src => "javascripts/jquery.easing.1.3.js", :type => "text/javascript"}
+    / Powering Isotope
+    %script{:src => "javascripts/jquery.isotope.min.js"}
+    %script{:src => "javascripts/handlebars.js"}
+    %script{:src => "javascripts/fake-element.js"}
+    %script{:src => "javascripts/custom_isotope.js"}
+    %script{:src => "javascripts/global.js"}
+
+
+#modal_curtain.hide
+#modal.hide
+  #modal_toolbar
+    %h2 Project Title
+    #modal_close
+  #modal_buttons
+    #modal_buttons_previous
+    #modal_buttons_next
+  #modal_slides
+    %ul
+
+%ul#modal_templates.hide
+  %li
+    .modal_slide
+      %img
+      .modal_slide_description
+        %h3 title
+        %p description
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ponzeka</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <meta content='Paige Ponzeka is a freelance Web Developer based out of New York City, this is her Resume and Contact information.' name='description'>
+    <meta content='Paige, Ponzeka, Developer, Freelance, Web Development, Resume, Paige Ponzeka' name='keywords'>
+    <!-- StyleSheets -->
+    <link href='stylesheets/style.css' media='screen' rel='stylesheet' type='text/css'>
+    <link href='stylesheets/global.css' media='screen' rel='stylesheet' type='text/css'>
+    <link href='stylesheets/isotope.css' media='screen' rel='stylesheet' type='text/css'>
+    <link href='./images/favicon.ico' rel='icon' type='image/png'>
+  </head>
+  <body>
+    <div id='navigation'>
+      <div class='reference'>
+        <ul class='nav'>
+          <li></li>
+          <li>
+            <a href='#home'>Homes</a>
+            <a href='#work'>Work</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class='section black' id='home'>
+      <h1>Hello,</h1>
+      <h2>My Name is</h2>
+      <h3>Paige Ponzeka</h3>
+      <h4>and I use technology to make people's lives easier.</h4>
+    </div>
+    <div class='section white' id='about'>
+      <p>
+        I currently work full time as a developer for
+        <a href='http://yext.com'>
+          Yext.
+        </a>
+      </p>
+    </div>
+    <div class='section black' id='work'>
+      <section class='clearfix' id='options'></section>
+      <ul class='option-set floated clearfix' id='filters'>
+        <li>
+          <a class='web_button' href='#web'>Web</a>
+        </li>
+        <li>
+          <a class='app_button' href='#app'>App</a>
+        </li>
+        <li>
+          <a class='research_button' href='#research'>Research</a>
+        </li>
+        <li>
+          <a class='selected' href='#show-all'>Contact</a>
+        </li>
+        <li>
+          <-- (Click to Sort)
+        </li>
+      </ul>
+      <!--
+        <ul id="sort">
+        <li><a href="#original-order" class="selected asc"><img height="15px" width="15px" src="./images/icon_original.png" /></a></li>
+        <li><a href="#name"><img height="15px" width="15px" src="./images/icon_name.gif" /></a></li>
+        <li><a href="#category"><img height="15px" width="15px" src="./images/icon_category.png" /></a></li>
+        <li id="#shuffle"><a href="#shuffle"><img height="15px" width="15px" src="./images/icon_shuffle.png" /></a></li>
+        </ul>
+      -->
+      <!-- #options -->
+      <div class='clickable variable-sizes clearfix js-workitems-container' id='container'></div>
+    </div>
+    <script id='work-item-template' type='text/x-handlebars-template'>
+      {{#each items}}
+        <div class="element {{#each tags}}{{this}}{{/each}}">
+          <div class="name" style="background-image:url('./images/examples/{{images.[0]}}')">
+      
+            <h2>
+              {{name}}
+              <span class="action">(Click to Read More)</span>
+            </h2>
+          </div>
+          <div class="description">
+            <p>
+              {{description}}
+      
+              {{#if images}}
+                <ul class="image-container">
+                  {{#each images}}
+                    <li>
+                      <img src="./images/examples/{{this}}"/>
+                    </li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+            </p>
+      
+          </div>
+        </div>
+      {{/each}}
+    </script>
+    <script src='https://code.jquery.com/jquery-3.1.1.min.js' type='text/javascript'></script>
+    <script src='javascripts/jquery.easing.1.3.js' type='text/javascript'></script>
+    <!-- Powering Isotope -->
+    <script src='javascripts/jquery.isotope.min.js'></script>
+    <script src='javascripts/handlebars.js'></script>
+    <script src='javascripts/fake-element.js'></script>
+    <script src='javascripts/custom_isotope.js'></script>
+    <script src='javascripts/global.js'></script>
+  </body>
+</html>
+<div class='hide' id='modal_curtain'></div>
+<div class='hide' id='modal'>
+  <div id='modal_toolbar'>
+    <h2>Project Title</h2>
+    <div id='modal_close'></div>
+  </div>
+  <div id='modal_buttons'>
+    <div id='modal_buttons_previous'></div>
+    <div id='modal_buttons_next'></div>
+  </div>
+  <div id='modal_slides'>
+    <ul></ul>
+  </div>
+</div>
+<ul class='hide' id='modal_templates'>
+  <li>
+    <div class='modal_slide'>
+      <img>
+      <div class='modal_slide_description'>
+        <h3>title</h3>
+        <p>description</p>
+      </div>
+    </div>
+  </li>
+</ul>

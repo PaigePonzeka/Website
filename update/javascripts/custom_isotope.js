@@ -63,14 +63,14 @@
   	  	
       //custom code to show the description of the element
       
-      $container.isotope('reLayout');
+      $container.isotope('layout');
     });
 
     // toggle variable sizes of all elements
     $('#toggle-sizes').find('a').click(function(){
       $container
         .toggleClass('variable-sizes')
-        .isotope('reLayout');
+        .isotope('layout');
       return false;
     });
 
@@ -175,22 +175,26 @@
           columnWidth : 240,
           rowHeight : 240
         },
-        animationEngine : $.browser.opera ? 'jquery' : 'best-available',
-        // animationEngine : 'jquery',
+        animationEngine : 'jquery',
         getSortData : {
-          symbol : function( $elem ) {
-            return $elem.attr('data-symbol');
+          symbol : function( elem ) {
+            var $elem = $(elem);
+            return $elem.data('symbol');
           },
-          category : function( $elem ) {
-            return $elem.attr('data-category');
+          category : function( elem ) {
+            var $elem = $(elem);
+            return $elem.data('category');
           },
-          number : function( $elem ) {
+          number : function( elem ) {
+            var $elem = $(elem);
             return parseInt( $elem.find('.number').text(), 10 );
           },
-          weight : function( $elem ) {
+          weight : function( elem ) {
+            var $elem = $(elem);
             return parseFloat( $elem.find('.weight').text().replace( /[\(\)]/g, '') );
           },
-          name : function ( $elem ) {
+          name : function ( elem ) {
+            var $elem = $(elem);
             return $elem.find('.name').text();
           }
         }
