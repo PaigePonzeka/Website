@@ -370,8 +370,12 @@
       :plain
         {{#each items}}
           <div class="element {{#each tags}}{{this}}{{/each}}">
-            <div class="name" style="background-image:url('./images/examples/{{images.[0]}}')">
-
+            {{#if images}}
+              <div class="preview-image">
+                <img src="./images/examples/{{images.[0]}}"/>
+              </div>
+            {{/if}}
+            <div class="name">
               <h2>
                 {{name}}
                 <span class="action">(Click to Read More)</span>

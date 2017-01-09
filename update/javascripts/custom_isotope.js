@@ -46,7 +46,15 @@
       });
 
     // change size of clicked element
-    $container.on('click', '.element', function(){
+    $container.on('click', '.element', function() {
+      var $this = $(this);
+
+      if ($this.hasClass('large')) {
+        $this.removeClass('large');
+        return;
+
+      }
+      $container.find('.element').removeClass('large');
       $(this).toggleClass('large');
       //get the class of the clicked element
       var myClass = $(this).attr("class");
@@ -69,7 +77,6 @@
     // toggle variable sizes of all elements
     $('#toggle-sizes').find('a').click(function(){
       $container
-        .toggleClass('variable-sizes')
         .isotope('layout');
       return false;
     });
@@ -146,16 +153,6 @@
       });
 	
     $(function(){
-
-      // hacky way of adding random size classes
-      $container.find('.element').each(function(){
-        if ( Math.random() > 0.6 ) {
-          $(this).addClass('width2');
-        }
-        if ( Math.random() > 0.6 ) {
-          $(this).addClass('height2');
-        }
-      });
 
 
       $container.isotope({
