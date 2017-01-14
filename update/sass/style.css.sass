@@ -1,5 +1,9 @@
 /* Start: Recommended Isotope styles
 
+@import isotope
+@import carousel
+
+
 .isotope-item
   z-index: 2
 
@@ -72,15 +76,124 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding: 0px
   margin-bottom: 20px
 
+$default-dim: 150px
+$large-dim: 300px
+$wrapper-border: 5px
+
 .element
-  width: 100px
-  height: 125px
-  margin: 5px
+  width: $default-dim
+  height: $default-dim
   float: left
   overflow: hidden
   position: relative
   background: #888
   color: #222
+  border-radius: 5px
+
+  &-wrapper
+    width: $default-dim - ($wrapper-border *2)
+    height: $default-dim - ($wrapper-border * 2)
+    border: $wrapper-border solid white
+
+  &:hover
+    .display-mode,
+    .preview-mode 
+      opacity: 0.7
+
+  .display-mode 
+    display: none
+    position: relative
+
+    &-close
+      position: absolute
+      right: 10px
+      top: 10px
+      color: #eee
+      font-size: 16px
+
+    &-name
+      max-height: 50px
+      overflow: hidden
+      text-align: center
+
+      h2
+        color: #fff
+        margin-bottom: 3px
+
+    &-description 
+      max-height: 50px
+      overflow: hidden
+      width: 100%
+      
+      p
+        margin: 5px 10px
+        color: #fff
+        font-size: 16px
+    
+    &-tags
+      ul
+        margin-left: 10px
+        clear: both
+        overflow: hidden 
+        li
+          float: left
+          font-size: 14px
+          text-transform: capitalize
+          color: #fff
+          margin-left: 5px
+
+
+  .preview-mode
+    &-name
+      color: #fff
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      text-align: center
+
+      h2
+        margin-top: 8px
+        font-size: 18px
+        margin: 10px 5px
+        line-height: 20px
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3)
+
+    &-image
+      width: 100%
+      height: 100%
+      opacity: 0.2
+      position: absolute
+      top: 0
+      left: 0
+
+      img
+        position: absolute
+        left: 0
+        top: 0
+        width: auto
+        height: 100%
+
+  &.portrait
+    height: $large-dim
+    //width: 150px
+    
+    .element-wrapper 
+      height: $large-dim - ($wrapper-border * 2)
+    
+  &.landscape
+    //height: 150px
+    width:  $large-dim
+
+    .preview-mode-image img
+      width: 100%
+      height: auto
+
+    .element-wrapper 
+      width: $large-dim - ($wrapper-border * 2)
+
+  &.square
+
   &.web
     background: #eee
     background: hsl(100%, 100%, 100%)
@@ -91,129 +204,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     background: #aaa
     background: hsl(100%, 100%, 100%)
 
-  &:hover
-    opacity: 0.8
-  *
-    margin: 0
-  .symbol
-    left: 0.2em
-    top: 0.4em
-    position: absolute
-    font-size: 2.0em
-    display: none
-    line-height: 1.0em
-    color: #FFF
-  &.large .symbol
-    font-size: 3.0em
-    display: none
-  &.fake .symbol
-    color: #000
-    display: none
-  .name
-    font-size: .6em
-    text-align: center
+  &.large
     width: 100%
-    position: absolute
+    height: 400px
 
-    .action
+    .display-mode
       display: block
-      font-size: 11px
-      color: #eee
 
-  .preview-image 
-    width: auto
-    height: 100%
-    position: absolute
-    top: 0
-    left: 0
-    opacity: 0.2
+    .element-wrapper
+      height: 400px - ($wrapper-border * 2)
+      width: 99%
 
-    img 
-      width: auto
-      height: 100%
-      padding: 0
-      margin: 0
-
-  .weight
-    font-size: 0.7em
-    left: 0.5em
-    bottom: 0.5em
-    display: none
-  .number
-    display: none
-    font-size: 1.25em
-    font-weight: bold
-    color: hsla(0, 0%, 0%, 0.5)
-    right: 0.5em
-    top: 0.5em
-
-
-.variable-sizes .element.large
-  font-size: 2.0em
-  width: 100%
-  height: 450px
-  z-index: 99
-  &.width2.height2
-    font-size: 2.0em
-    width: 350px
-    height: 350px
-    z-index: 99
-
-.description
-  padding: 25px
-  left: 0.2em
-  top: 0.4em
-  display: none
-
-  .image-container
-    width: 100%
-    height: 330px
-
-    li
-      height: 100%
-      width: auto
-
-  img 
-    height: 100%
-    display: inherit
-    margin: 0 auto
-
-.element .description p
-  font-size: 16px
-  width: 100%
-  margin-bottom: 10px
-
-.element
-  .description a
-    text-decoration: underline
-    color: #000
-    &:hover
-      text-decoration: none
-  &.large 
-    .name
-      position: static
-      text-align: center
-      margin-top: 10px
-
-      .action 
-        display: none
-
-    .preview-image
+    .preview-mode
       display: none
-      width: 0
-      height: 0
 
-    .description
-      display: block
 
-      .clickable .element:hover
-        cursor: pointer
-        h3
-          text-shadow: 0 0 10px white,     0 0 10px white
-        p
-          text-shadow: 0 0 5px white,     0 0 5px white
-        h2
-          color: white
 
 /**** Example Options ***
 
@@ -621,4 +626,4 @@ ul.social_footer
         -moz-transform: rotateZ(360deg)
         transform: rotateZ(360deg)
 
-/* line 37
+@import global

@@ -1,5 +1,6 @@
 (function() {
   var clearModal;
+
   // list of work items done
   // would be nice to have this 
   // one some sort of noSql solution
@@ -13,8 +14,14 @@
           './knicksnow/1.png'
         ],
         tags: [
-          'web'
-        ]
+          'web',
+          'ruby',
+          'rails',
+          'javascript',
+          'CSS',
+          'HTML'
+        ],
+        layout: 'landscape'
       }, 
       {
         name: 'BlueShirtsUnited',
@@ -24,8 +31,14 @@
           './blueshirtsunited/1.png'
         ],
         tags: [
-          'web'
-        ]
+          'web',
+          'ruby',
+          'javascript',
+          'CSS',
+          'HTML',
+          'rails'
+        ],
+        layout: 'portrait'
       },
       {
         name: 'Member.ly',
@@ -37,21 +50,44 @@
           './memberly/3.png'
         ],
         tags: [
-          'web'
-        ]
+          'web',
+          'ruby',
+          'HTML',
+          'CSS'
+        ],
+        layout: 'portrait'
       },
       {
         name: 'Playlist Creator',
         download: './demos/PlaylistCreator.zip',
         description: 'This was a personal programming project using C# and Microsoft Visual Studio. It was a UI created for Server Adminstration to generate game lists for their servers.',
         tags: [
-          'app'
+          'app',
+          'C#',
+          'design'
         ],
         images: [
           './playlistcreator/1.png',
           './playlistcreator/2.png',
           './playlistcreator/3.png'
-        ]
+        ],
+        layout: 'square'
+      },      
+      {
+        name: 'Attack',
+        description: 'A simple game built off of javascript and canvas. click add ball to get started',
+        images: [
+          './attack/1.png'
+        ],
+        tags: [
+          'web',
+          'javascript',
+          'HTML',
+          'CSS',
+          'd3.js'
+        ],
+        link: 'https://paigeponzeka.github.io/Attack',
+        layout: 'square'
       },
       {
         name: 'Stats2v',
@@ -67,19 +103,30 @@
           './stats2v/7.png'
         ],
         tags: [
-          'web'
-        ]
+          'web',
+          'php',
+          'HTML',
+          'CSS',
+          'data',
+          'design'
+        ],
+        layout: 'portrait'
       },
       {
         name: 'VSU Victim Database',
         description: 'Database created for the Brooklyn\'s DA office to help file data for Quartly and monthly statstical requirements',
         tags: [
-          'app'
+          'app',
+          'access',
+          'design',
+          'lead',
+          'volunteer'
         ],
         images: [
           './vsu/1.png',
           './vsu/2.png'
-        ]
+        ],
+        layout: 'landscape'
       },
       {
         name: 'Museum of Modern Art',
@@ -89,13 +136,19 @@
         ],
         images: [
           './moma/1.jpg'
-        ]
+        ],
+        layout: 'landscape'
       },
       {
         name: 'Game Attendance',
         description: 'A completely javascript based game attendance tracker used to track player attendance for softball games.',
         tags: [
-          'web'
+          'web',
+          'javascript',
+          'HTML',
+          'CSS',
+          'parse',
+          'nosql'
         ],
         link: 'http://paigeponzeka.github.io/GameAttendance/game.html',
         github: 'https://github.com/PaigePonzeka/GameAttendance',
@@ -103,7 +156,8 @@
           './gameattendance/1.png',
           './gameattendance/2.png',
           './gameattendance/3.png'
-        ]
+        ],
+        layout: 'portrait'
       },
       {
         name: 'BASL Manager',
@@ -117,22 +171,17 @@
           './baslmanager/5.png'
         ],
         tags: [
-          'web'
-        ]
+          'web',
+          'ruby',
+          'rails',
+          'HTML',
+          'CSS',
+          'bootstrap'
+        ],
+        layout: 'portrait'
       },
       {
-        name: 'attack',
-        description: 'A simple game built off of javascript and canvas. click add ball to get started',
-        images: [
-          './attack/1.png'
-        ],
-        tags: [
-          'web'
-        ],
-        link: 'https://paigeponzeka.github.io/Attack'
-      },
-      {
-        name: 'Group Commerce',
+        name: 'Group Commerce Admin',
         description: 'Lead front-end Engineer for the development of an admin CMS project..',
         images: [
           './groupcommerce/1.png',
@@ -145,8 +194,14 @@
           './groupcommerce/8.png'
         ],
         tags: [
-          'web'
-        ]
+          'web',
+          'HTML',
+          'CSS',
+          '.net',
+          'javascript',
+          'bootstrap'
+        ],
+        layout: 'portrait'
       },
       {
         name: 'Big Apple Softball League',
@@ -160,8 +215,12 @@
           './basl/5.png'
         ],
         tags: [
-          'web'
-        ]
+          'web',
+          'wordpress',
+          'HTML',
+          'CSS'
+        ],
+        layout: 'portrait'
       }
 
 
@@ -169,7 +228,6 @@
 
   var WorkList = function() {
     var source = $('#work-item-template').html();
-    console.log(source);
     this.template = Handlebars.compile(source);
     this.init();
   };
@@ -181,8 +239,6 @@
   WorkList.prototype.init = function() {
     var html = this.template(workListItems);
     $('.js-workitems-container').html(html);
-    console.log(html);
-
   };
 
   var worklist = new WorkList();
@@ -200,67 +256,56 @@
       }, 3000, "easeInOutExpo");
       return event.preventDefault();
     });
-    $('#modal_slides li:first').before($('#modal_slides li:last'));
-    $('#modal_slides ul').css({
-      'left': left_value
-    });
-    $("#modal_buttons_previous").click(function() {
-      var left_indent;
-      left_indent = parseInt($("#modal_slides ul").css("left")) + item_width;
-      $("#modal_slides ul").animate({
-        left: left_indent
-      }, 200, function() {
-        $("#modal_slides li:first").before($("#modal_slides li:last"));
-        return $("#modal_slides ul").css({
-          left: left_value
-        });
-      });
-      return false;
-    });
-    $("#modal_buttons_next").click(function() {
-      var left_indent;
-      left_indent = parseInt($("#modal_slides ul").css("left")) - item_width;
-      $("#modal_slides ul").animate({
-        left: left_indent
-      }, 200, function() {
-        $("#modal_slides li:last").after($("#modal_slides li:first"));
-        return $("#modal_slides ul").css({
-          left: left_value
-        });
-      });
-      return false;
-    });
-    $('#modal_close').click(function() {
-      $('#modal').addClass('hide');
-      return $('#modal_curtain').addClass('hide');
-    });
-    return $('.view_modal').click(function() {
-      var images_folder, n, picture, slide, slide_count, slide_description, slide_picture, slide_title, title, _results;
-      images_folder = 'images/projects/';
-      $('#modal').removeClass('hide');
-      $('#modal_curtain').removeClass('hide');
-      clearModal();
-      title = $(this).attr('data-title');
-      title = title.replace(/\s/g, '_');
-      console.log(title);
-      $("#modal h2").html(title);
-      slide_count = $(this).attr('data-slide_count');
-      picture = "";
-      _results = [];
-      for (n = 1; 1 <= slide_count ? n <= slide_count : n >= slide_count; 1 <= slide_count ? n++ : n--) {
-        picture = "";
-        slide_description = $(this).attr("data-" + n + "_description");
-        slide_title = $(this).attr("data-" + n + "_title");
-        slide_picture = "" + images_folder + title + "/" + n + ".png";
-        if (slide_picture) {
-          picture = slide_picture;
-        }
-        _results.push(slide_description && slide_title ? (slide = $("#modal_templates li").clone(), slide.find('h3').html(slide_title), slide.find('p').html(slide_description), slide.find('img').attr('src', slide_picture), slide.appendTo('#modal_slides ul')) : void 0);
-      }
-      return _results;
-    });
   });
   clearModal = function() {
     return $("#modal_slides ul").html("");
   };
+
+  var Carousel = function($container) {
+
+    if (!$container) {
+      return;
+    }
+
+    var itemSelector = '.js-carousel-list-item';
+    var listSelector = '.js-carousel-list';
+    this.$list = $container.find(listSelector);
+    var items = this.$list.find(itemSelector);
+
+    if (!items) {
+      return;
+    }
+
+    this.itemsWidth = items.first().outerWidth();
+    this.itemsCount = items.length;
+
+    if (this.itemsCount <= 1) {
+      return;
+    }
+
+    this.maxMargin = (this.itemsCount - 1) * this.itemsWidth;
+  };
+
+  Carousel.prototype.start = function() {
+    var self = this;
+    this.count = 1;
+
+    window.carouselTimeout = window.setInterval( function() {
+      
+      self.marginLeft = self.count * self.itemsWidth;
+      self.$list.css('margin-left', - self.marginLeft);
+      self.count++;
+
+      if (self.marginLeft >= self.maxMargin) {
+        self.count = 0;
+      }
+    } , 3000);
+  };
+
+  Carousel.prototype.stop = function() {
+    window.clearInterval(window.carouselTimeout);
+  };
+
+  window.Carousel = Carousel;
+
 }).call(this);

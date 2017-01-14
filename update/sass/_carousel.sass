@@ -1,0 +1,28 @@
+// Code for Carousel Plugin by Paige Ponzeka
+@import config
+
+$item-width: 350px
+
+.carousel
+  text-align: center
+  height: 275px
+
+  &-wrapper
+    width: $item-width
+    height: 250px
+    overflow: hidden
+    margin: 0 auto
+
+  &-list
+    width: 4000px
+    clear: both
+    +vendor-prefix('transition', 'all 1s linear')
+    margin-left: 0
+
+    &-item
+      float: left
+      width: $item-width
+
+      img
+        width: 100% 
+        height: auto

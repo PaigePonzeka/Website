@@ -7,8 +7,6 @@
     <meta content='Paige, Ponzeka, Developer, Freelance, Web Development, Resume, Paige Ponzeka' name='keywords'>
     <!-- StyleSheets -->
     <link href='stylesheets/style.css' media='screen' rel='stylesheet' type='text/css'>
-    <link href='stylesheets/global.css' media='screen' rel='stylesheet' type='text/css'>
-    <link href='stylesheets/isotope.css' media='screen' rel='stylesheet' type='text/css'>
     <link href='./images/favicon.ico' rel='icon' type='image/png'>
   </head>
   <body>
@@ -50,52 +48,60 @@
           <a class='research_button' href='#research'>Research</a>
         </li>
         <li>
-          <a class='selected' href='#show-all'>Contact</a>
+          <a class='selected' href='#show-all'>All</a>
         </li>
         <li>
           <-- (Click to Sort)
         </li>
       </ul>
-      <!--
-        <ul id="sort">
-        <li><a href="#original-order" class="selected asc"><img height="15px" width="15px" src="./images/icon_original.png" /></a></li>
-        <li><a href="#name"><img height="15px" width="15px" src="./images/icon_name.gif" /></a></li>
-        <li><a href="#category"><img height="15px" width="15px" src="./images/icon_category.png" /></a></li>
-        <li id="#shuffle"><a href="#shuffle"><img height="15px" width="15px" src="./images/icon_shuffle.png" /></a></li>
-        </ul>
-      -->
-      <!-- #options -->
       <div class='clickable variable-sizes clearfix js-workitems-container' id='container'></div>
     </div>
     <script id='work-item-template' type='text/x-handlebars-template'>
       {{#each items}}
-        <div class="element {{#each tags}}{{this}}{{/each}}">
-          {{#if images}}
-            <div class="preview-image">
-              <img src="./images/examples/{{images.[0]}}"/>
-            </div>
-          {{/if}}
-          <div class="name">
-            <h2>
-              {{name}}
-              <span class="action">(Click to Read More)</span>
-            </h2>
-          </div>
-          <div class="description">
-            <p>
-              {{description}}
-      
+        <div class="element {{layout}} {{#each tags}}{{this}} {{/each}}">
+          <div class="element-wrapper">
+            <div class="preview-mode">
               {{#if images}}
-                <ul class="image-container">
-                  {{#each images}}
-                    <li>
-                      <img src="./images/examples/{{this}}"/>
-                    </li>
-                  {{/each}}
-                </ul>
+                <div class="preview-mode-image">
+                  <img src="./images/examples/{{images.[0]}}"/>
+                </div>
               {{/if}}
-            </p>
+              <div class="preview-mode-name">
+                <h2>{{name}}</h2>
+              </div>
+            </div>
+            <div class="display-mode">
+              <div class="display-mode-name">
+                <h2>{{name}}</h2>
+              </div>
       
+              <div class="display-mode-description">
+                <p>{{description}}</p>
+              </div>
+              {{#if images}}
+                <div class="display-mode-images carousel js-carousel">
+                  <div class="display-mode-images-container carousel-wrapper">
+                    <ul class="display-mode-images-list js-carousel-list carousel-list">
+                      {{#each images}}
+                        <li class="js-carousel-list-item carousel-list-item">
+                          <img src="./images/examples/{{this}}"/>
+                        </li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                </div>
+              {{/if}}
+              {{#if tags}}
+                <div class="display-mode-tags">
+                  <ul>
+                    {{#each tags}}
+                      <li>{{this}}</li>
+                    {{/each}}
+                  </ul>
+                </div>
+              {{/if}}
+              <div class="js-close display-mode-close">X</div>
+            </div>
           </div>
         </div>
       {{/each}}
@@ -105,33 +111,7 @@
     <!-- Powering Isotope -->
     <script src='javascripts/jquery.isotope.min.js'></script>
     <script src='javascripts/handlebars.js'></script>
-    <script src='javascripts/fake-element.js'></script>
     <script src='javascripts/custom_isotope.js'></script>
     <script src='javascripts/global.js'></script>
   </body>
 </html>
-<div class='hide' id='modal_curtain'></div>
-<div class='hide' id='modal'>
-  <div id='modal_toolbar'>
-    <h2>Project Title</h2>
-    <div id='modal_close'></div>
-  </div>
-  <div id='modal_buttons'>
-    <div id='modal_buttons_previous'></div>
-    <div id='modal_buttons_next'></div>
-  </div>
-  <div id='modal_slides'>
-    <ul></ul>
-  </div>
-</div>
-<ul class='hide' id='modal_templates'>
-  <li>
-    <div class='modal_slide'>
-      <img>
-      <div class='modal_slide_description'>
-        <h3>title</h3>
-        <p>description</p>
-      </div>
-    </div>
-  </li>
-</ul>

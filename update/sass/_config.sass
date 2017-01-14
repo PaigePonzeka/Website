@@ -3,3 +3,10 @@ $blue: #0fa1ff
 $green: #ccff00
 $pink: #FF00CC
 $purple: #9900FF
+
+= vendor-prefix($name, $argument)
+  -webkit-#{$name}: #{$argument}
+  -ms-#{$name}: #{$argument}
+  -moz-#{$name}: #{$argument}
+  -o-#{$name}: #{$argument}
+  #{$name}: #{$argument}

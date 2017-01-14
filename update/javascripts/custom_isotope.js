@@ -48,29 +48,22 @@
     // change size of clicked element
     $container.on('click', '.element', function() {
       var $this = $(this);
+      var $carousel = $this.find('.js-carousel');
 
+      var carousel = new window.Carousel($carousel);
       if ($this.hasClass('large')) {
         $this.removeClass('large');
+              $container
+        .isotope('layout');
+        carousel.stop();
         return;
 
       }
       $container.find('.element').removeClass('large');
-      $(this).toggleClass('large');
-      //get the class of the clicked element
-      var myClass = $(this).attr("class");
-  	  //check to see if class contains the string large
-  	  if(myClass.indexOf("large") == -1) //meaning the string does not exist
-  	  	{
-  	  		
-  	  	}
-  	  	else
-  	  	{
-  	  		//if it does show the description
-  	  	  $(this).css("display", "block");
-  	  	}
-  	  	
-      //custom code to show the description of the element
-      
+      $(this).addClass('large');
+      if (carousel.itemsCount > 1) {
+        carousel.start();
+      }
       $container.isotope('layout');
     });
 
@@ -157,11 +150,10 @@
 
       $container.isotope({
         itemSelector : '.element',
-        // layoutMode : 'fitRows',
         masonry : {
-          columnWidth : 120
+          columnWidth : 50
         },
-        masonryHorizontal : {
+        /*masonryHorizontal : {
           rowHeight: 120
         },
         cellsByRow : {
@@ -171,7 +163,7 @@
         cellsByColumn : {
           columnWidth : 240,
           rowHeight : 240
-        },
+        },*/
         animationEngine : 'jquery',
         getSortData : {
           symbol : function( elem ) {
