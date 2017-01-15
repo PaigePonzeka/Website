@@ -1,0 +1,52 @@
+@import config
+
+$background: white
+
+%social-icon-hover
+  border-radius: 100%
+  color: $background // IE8
+  fill: $background
+  transform: scale(1.25)
+  transition: background-color .5s, transform .5s ease-out
+
+#contact 
+  .contact-list
+    width: 460px
+    list-style: none
+    +clearfix
+    margin: 20px auto
+
+    li
+      margin-left: 10px
+      width: 100px
+      height: 100px
+      float: left
+      list-style: none
+
+      &.linkedin
+        a svg
+          fill: $blue
+      &.twitter
+        a svg
+          fill: $purple
+      &.email
+        a svg
+          fill: $green
+      &.instagram
+        a svg
+          fill: $pink
+
+      a
+        border-bottom: none
+
+        &:hover svg
+          @extend %social-icon-hover
+
+      svg
+        width: 100%
+        height: 100%
+        fill: white
+
+    @media (max-width: 460px)
+      width: 260px
+    

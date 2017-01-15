@@ -1,0 +1,21 @@
+#home {
+  padding: 40px 0 0 50px; }
+  #home.section h1 {
+    color: #ccff00;
+    font-size: 60px; }
+  #home.section h2 {
+    color: #9900ff;
+    font-size: 60px; }
+  #home.section h3 {
+    color: #ff00cc;
+    font-size: 60px; }
+  #home.section h4 {
+    color: white;
+    font-size: 30px;
+    margin: 5px 0; }
+  #home.section h5 {
+    font-size: 24px; }
+  #home.section p {
+    margin: 20px 0px 0px 50px;
+    width: 900px;
+    font-size: 24px; }

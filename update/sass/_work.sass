@@ -1,0 +1,280 @@
+/**
+ * Styling for the Work Isotope Grid
+ */
+
+@import 'config'
+
+
+.isotope-item
+  z-index: 2
+
+.isotope-hidden.isotope-item
+  pointer-events: none
+  z-index: 1
+
+/**** Isotope CSS3 transitions ***
+
+.isotope
+  -webkit-transition-duration: 0.8s
+  -moz-transition-duration: 0.8s
+  transition-duration: 0.8s
+  .isotope-item
+    -webkit-transition-duration: 0.8s
+    -moz-transition-duration: 0.8s
+    transition-duration: 0.8s
+    -webkit-transition-property: -webkit-transform, opacity
+    -moz-transition-property: -moz-transform, opacity
+    transition-property: transform, opacity
+  -webkit-transition-property: height, width
+  -moz-transition-property: height, width
+  transition-property: height, width
+
+  /* End: Recommended Isotope styles
+
+  /**** disabling Isotope CSS3 transitions ***
+
+  .isotope
+    &.no-transition
+      -webkit-transition-duration: 0s
+      -moz-transition-duration: 0s
+      transition-duration: 0s
+      .isotope-item
+        -webkit-transition-duration: 0s
+        -moz-transition-duration: 0s
+        transition-duration: 0s
+    &.infinite-scrolling
+      -webkit-transition: none
+      -moz-transition: none
+      transition: none
+
+
+/*Hover over buttons to change
+
+#options, #filters
+  +clearfix
+  li a
+  .option-set li a.selected
+    +clearfix
+    text-shadow: none
+    color: white
+  li a
+    +filter_button('career', $career-color)
+    +filter_button('project', $project-color)
+    +filter_button('volunteer', $volunteer-color)
+
+/*Value to Change
+
+/*Hover over buttons to change
+
+/*Hover over buttons to change
+
+/*Style Navigation for Isotope
+
+ul#filters
+  margin: 0 auto
+  width: 400px
+  li
+    float: left
+    padding: 0 10px
+
+/* disable CSS transitions for containers with infinite scrolling
+
+#work
+  .info
+    text-align: center
+    margin: 20px auto
+    line-height: 20px
+
+    p
+      margin-top: 5px
+
+    a
+      margin-top: 5px
+      display: inline-block
+
+  h3
+    color: #ccff00
+    font-size: 20px
+
+#filters
+  font-size: 14px
+  padding: 0
+  margin: 0
+  display: block
+  width: 500px
+  margin: 5px auto
+
+  li
+    color: white
+    font-size: 14px
+    padding: 0
+    margin: 0 5px
+    display: block
+    float: left
+    
+    a
+      padding: 5px
+      border-radius: 5px
+      border-bottom: none
+
+
+.element
+  width: $default-dim
+  height: $default-dim
+  float: left
+  overflow: hidden
+  position: relative
+  background: #888
+  color: #222
+  border-radius: 5px
+  cursor: pointer
+
+  &-wrapper
+    width: $default-dim - ($wrapper-border *2)
+    height: $default-dim - ($wrapper-border * 2)
+    border: $wrapper-border solid white
+
+  &:hover
+    .display-mode,
+    .preview-mode 
+      opacity: 0.7
+
+  .display-mode 
+    display: none
+    position: relative
+
+    &-close
+      position: absolute
+      right: 10px
+      top: 10px
+      color: #eee
+      font-size: 16px
+
+    &-name
+      max-height: 50px
+      overflow: hidden
+      text-align: center
+
+      h2
+        color: #fff
+        background: $color-bg
+        padding: 5px
+
+    &-description 
+      max-height: 75px
+      overflow: hidden
+      width: 100%
+      
+      p
+        background: $color-bg
+        padding: 5px
+        margin: 0 5px
+        color: #fff
+        font-size: 16px
+    
+    &-tags
+      background: $color-bg
+      padding: 5px
+
+      ul
+        margin-left: 10px
+        clear: both
+        overflow: hidden 
+
+        li
+          float: left
+          font-size: 14px
+          text-transform: capitalize
+          color: #fff
+          margin-left: 5px
+
+
+  .preview-mode
+    &-name
+      color: #fff
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      text-align: center
+
+      h2
+        margin-top: 8px
+        font-size: 18px
+        margin: 0px 5px
+        padding: 10px 0
+        line-height: 20px
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3)
+        background: $color-bg
+
+    &-image
+      width: 100%
+      height: 100%
+      opacity: 0.2
+      position: absolute
+      top: 0
+      left: 0
+
+      img
+        position: absolute
+        left: 0
+        top: 0
+        width: auto
+        height: 100%
+
+  &.portrait
+    height: $large-dim
+    width: $large-other-dim
+    
+    .element-wrapper 
+      height: $large-dim - ($wrapper-border * 2)
+      width: $large-other-dim - ($wrapper-border * 2)
+    
+  &.landscape
+    height: $large-other-dim
+    width:  $large-dim
+
+    .preview-mode-image img
+      width: 100%
+      height: auto
+
+    .element-wrapper 
+      width: $large-dim - ($wrapper-border * 2)
+      height: $large-other-dim - ($wrapper-border * 2)
+
+  &.square
+    .carousel-wrapper,
+    .carousel-list-item
+      width: 250px
+      height: 250px
+
+
+  &.large
+    width: 100%
+    height: 400px
+
+    .display-mode
+      display: block
+
+    .element-wrapper
+      height: 400px - ($wrapper-border * 2)
+      width: 99%
+
+    .preview-mode
+      display: none
+
+
+.element
+  &.career
+    background: darken($career-color, 10%)
+  &.project
+    background: darken($project-color, 10%)
+  &.volunteer
+    background: darken($volunteer-color, 10%)
+
+#container
+  margin: 20px auto
+  width: 100%
+  border: 0px solid #666
+  padding: 0px
+  +clearfix

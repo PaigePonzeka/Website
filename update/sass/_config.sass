@@ -4,9 +4,41 @@ $green: #ccff00
 $pink: #FF00CC
 $purple: #9900FF
 
+$volunteer-color: $green
+$career-color: $purple
+$project-color: $pink
+
+$color-link: $blue
+
+// element dimensions
+$default-dim: 200px
+$large-dim: 400px
+$large-other-dim: 200px
+$wrapper-border: 5px
+
+$color-bg: rgba(100, 100, 100, 0.5)
+
 = vendor-prefix($name, $argument)
   -webkit-#{$name}: #{$argument}
   -ms-#{$name}: #{$argument}
   -moz-#{$name}: #{$argument}
   -o-#{$name}: #{$argument}
   #{$name}: #{$argument}
+
+= filter_button($name, $color)
+  &.#{$name}_button
+    color: $color
+    
+    &:hover
+      color: #fff
+      background-color: $color
+
+    &.selected
+      color: #fff
+      background-color: $color
+
+= clearfix
+  &:after 
+    content: ""
+    display: table
+    clear: both

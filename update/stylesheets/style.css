@@ -1,44 +1,23 @@
-/* Start: Recommended Isotope styles */
-/*Hover over buttons to change */
-#options li a.web_button:hover, #filters li a.web_button:hover {
-  color: black;
-  background-color: #9900ff; }
-#options li a.app_button:hover, #filters li a.app_button:hover {
-  color: black;
-  background-color: #ff00cc; }
-#options li a.research_button:hover, #filters li a.research_button:hover {
-  color: black;
-  background-color: #ccff00; }
-#options .option-set li a.selected, #filters .option-set li a.selected {
-  background-color: #0d0b0c;
-  text-shadow: none;
-  color: white; }
-#options li a.web_button.selected, #filters li a.web_button.selected {
-  color: black;
-  background-color: #9900ff; }
-#options li a.app_button.selected, #filters li a.app_button.selected {
-  color: black;
-  background-color: #ff00cc; }
-#options li a.research_button.selected, #filters li a.research_button.selected {
-  color: black;
-  background-color: #ccff00; }
-#options li a.web_button, #filters li a.web_button {
-  color: #9900ff; }
-#options li a.app_button, #filters li a.app_button {
-  color: #ff00cc; }
-#options li a.research_button, #filters li a.research_button {
-  color: #ccff00; }
+/*** Base styles *** */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-/*Value to Change */
-/*Hover over buttons to change */
-/*Hover over buttons to change */
-/*Style Navigation for Isotope */
-ul#filters {
-  margin: 0 auto;
-  width: 400px; }
-  ul#filters li {
-    float: left;
-    padding: 0 10px; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+  article a img, aside a img, details a img, figcaption a img, figure a img, footer a img, header a img, hgroup a img, menu a img, nav a img, section a img {
+    border: none; }
+
+html, body {
+  height: 100%; }
+
+* {
+  margin: 0;
+  padding: 0; }
 
 .carousel {
   text-align: center;
@@ -59,11 +38,15 @@ ul#filters {
     margin-left: 0; }
     .carousel-list-item {
       float: left;
-      width: 350px; }
+      width: 350px;
+      height: 250px; }
       .carousel-list-item img {
         width: 100%;
-        height: auto; }
+        height: 100%; }
 
+/*
+ * Styling for the Work Isotope Grid
+ */
 .isotope-item {
   z-index: 2; }
 
@@ -101,42 +84,100 @@ ul#filters {
     -moz-transition: none;
     transition: none; }
 
+/*Hover over buttons to change */
+#options:after, #filters:after {
+  content: "";
+  display: table;
+  clear: both; }
+#options .option-set li a.selected, #filters .option-set li a.selected {
+  text-shadow: none;
+  color: white; }
+  #options .option-set li a.selected:after, #filters .option-set li a.selected:after {
+    content: "";
+    display: table;
+    clear: both; }
+#options li a.career_button, #filters li a.career_button {
+  color: #9900ff; }
+  #options li a.career_button:hover, #filters li a.career_button:hover {
+    color: white;
+    background-color: #9900ff; }
+  #options li a.career_button.selected, #filters li a.career_button.selected {
+    color: white;
+    background-color: #9900ff; }
+#options li a.project_button, #filters li a.project_button {
+  color: #ff00cc; }
+  #options li a.project_button:hover, #filters li a.project_button:hover {
+    color: white;
+    background-color: #ff00cc; }
+  #options li a.project_button.selected, #filters li a.project_button.selected {
+    color: white;
+    background-color: #ff00cc; }
+#options li a.volunteer_button, #filters li a.volunteer_button {
+  color: #ccff00; }
+  #options li a.volunteer_button:hover, #filters li a.volunteer_button:hover {
+    color: white;
+    background-color: #ccff00; }
+  #options li a.volunteer_button.selected, #filters li a.volunteer_button.selected {
+    color: white;
+    background-color: #ccff00; }
+
+/*Value to Change */
+/*Hover over buttons to change */
+/*Hover over buttons to change */
+/*Style Navigation for Isotope */
+ul#filters {
+  margin: 0 auto;
+  width: 400px; }
+  ul#filters li {
+    float: left;
+    padding: 0 10px; }
+
 /* disable CSS transitions for containers with infinite scrolling */
-/*** Base styles *** */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-  margin: 0;
+#work .info {
+  text-align: center;
+  margin: 20px auto;
+  line-height: 20px; }
+  #work .info p {
+    margin-top: 5px; }
+  #work .info a {
+    margin-top: 5px;
+    display: inline-block; }
+#work h3 {
+  color: #ccff00;
+  font-size: 20px; }
+
+#filters {
+  font-size: 14px;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
   display: block;
-  /*** Isotope styles *** */
-  /* required for containers to inherit vertical size from window */ }
-  article a img, aside a img, details a img, figcaption a img, figure a img, footer a img, header a img, hgroup a img, menu a img, nav a img, section a img {
-    border: none; }
-  article html, article body, aside html, aside body, details html, details body, figcaption html, figcaption body, figure html, figure body, footer html, footer body, header html, header body, hgroup html, hgroup body, menu html, menu body, nav html, nav body, section html, section body {
-    height: 100%; }
-
-#container {
-  border: 0px solid #666666;
-  padding: 0px;
-  margin-bottom: 20px; }
+  width: 500px;
+  margin: 5px auto; }
+  #filters li {
+    color: white;
+    font-size: 14px;
+    padding: 0;
+    margin: 0 5px;
+    display: block;
+    float: left; }
+    #filters li a {
+      padding: 5px;
+      border-radius: 5px;
+      border-bottom: none; }
 
 .element {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   float: left;
   overflow: hidden;
   position: relative;
   background: #888888;
   color: #222222;
-  border-radius: 5px; }
+  border-radius: 5px;
+  cursor: pointer; }
   .element-wrapper {
-    width: 140px;
-    height: 140px;
+    width: 190px;
+    height: 190px;
     border: 5px solid white; }
   .element:hover .display-mode,
   .element:hover .preview-mode {
@@ -156,25 +197,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       text-align: center; }
       .element .display-mode-name h2 {
         color: white;
-        margin-bottom: 3px; }
+        background: rgba(100, 100, 100, 0.5);
+        padding: 5px; }
     .element .display-mode-description {
-      max-height: 50px;
+      max-height: 75px;
       overflow: hidden;
       width: 100%; }
       .element .display-mode-description p {
-        margin: 5px 10px;
+        background: rgba(100, 100, 100, 0.5);
+        padding: 5px;
+        margin: 0 5px;
         color: white;
         font-size: 16px; }
-    .element .display-mode-tags ul {
-      margin-left: 10px;
-      clear: both;
-      overflow: hidden; }
-      .element .display-mode-tags ul li {
-        float: left;
-        font-size: 14px;
-        text-transform: capitalize;
-        color: white;
-        margin-left: 5px; }
+    .element .display-mode-tags {
+      background: rgba(100, 100, 100, 0.5);
+      padding: 5px; }
+      .element .display-mode-tags ul {
+        margin-left: 10px;
+        clear: both;
+        overflow: hidden; }
+        .element .display-mode-tags ul li {
+          float: left;
+          font-size: 14px;
+          text-transform: capitalize;
+          color: white;
+          margin-left: 5px; }
   .element .preview-mode-name {
     color: white;
     position: absolute;
@@ -185,9 +232,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     .element .preview-mode-name h2 {
       margin-top: 8px;
       font-size: 18px;
-      margin: 10px 5px;
+      margin: 0px 5px;
+      padding: 10px 0;
       line-height: 20px;
-      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3); }
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+      background: rgba(100, 100, 100, 0.5); }
   .element .preview-mode-image {
     width: 100%;
     height: 100%;
@@ -202,25 +251,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       width: auto;
       height: 100%; }
   .element.portrait {
-    height: 300px; }
+    height: 400px;
+    width: 200px; }
     .element.portrait .element-wrapper {
-      height: 290px; }
+      height: 390px;
+      width: 190px; }
   .element.landscape {
-    width: 300px; }
+    height: 200px;
+    width: 400px; }
     .element.landscape .preview-mode-image img {
       width: 100%;
       height: auto; }
     .element.landscape .element-wrapper {
-      width: 290px; }
-  .element.web {
-    background: #eeeeee;
-    background: white; }
-  .element.app {
-    background: #cccccc;
-    background: white; }
-  .element.research {
-    background: #aaaaaa;
-    background: white; }
+      width: 390px;
+      height: 190px; }
+  .element.square .carousel-wrapper,
+  .element.square .carousel-list-item {
+    width: 250px;
+    height: 250px; }
   .element.large {
     width: 100%;
     height: 400px; }
@@ -232,413 +280,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     .element.large .preview-mode {
       display: none; }
 
-/*** Example Options *** */
-#options {
-  padding-bottom: 1em; }
-  #options h3 {
-    margin-bottom: 0.2em; }
-  #options ul {
-    margin: 0;
-    list-style: none;
-    padding-left: 50px; }
+.element.career {
+  background: #7a00cc; }
+.element.project {
+  background: #cc00a3; }
+.element.volunteer {
+  background: #a3cc00; }
 
-.title {
-  display: inline;
-  font-size: 30px; }
-
-h2.title, h3.title {
-  border-bottom-style: double;
-  border-bottom-width: medium; }
-
-#options ul ul {
-  margin-left: 1.5em; }
-#options .floated li {
-  float: left; }
-#options li a {
-  display: inline-block;
-  color: #222222;
-  font-weight: bold;
-  font-size: 20px; }
-  #options li a:hover {
-    background-color: #fba540; }
-  #options li a.web_button:hover {
-    background-color: #eeeeee; }
-  #options li a.app_button:hover {
-    background-color: #cccccc; }
-  #options li a.research_button:hover {
-    background-color: #aaaaaa; }
-  #options li a.games_button:hover {
-    background-color: #888888; }
-  #options li a.social_button:hover {
-    background-color: #666666; }
-  #options li a.classes_button:hover {
-    background-color: #444444; }
-  #options li a:active {
-    background-color: #fa7b2a; }
-#options .floated li a {
-  margin-left: 10px;
-  border-radius: 7px; }
-#options .option-set li a.selected {
-  background-color: #0d0b0c;
-  text-shadow: none;
-  color: white; }
-#options #sort {
-  float: right; }
-  #options #sort li {
-    display: inline; }
-
-/*Value to Change */
-/*default hover over */
-/*Hover over buttons to change */
-/*Hovers over to change */
-/*Value to Change */
-/*** Horizontal *** */
-.horizontal #container {
-  height: 80%; }
-
-#copy {
-  max-width: 640px; }
-
-/*** Photo demo *** */
-.photos .photo {
-  width: 320px;
-  margin: 5px;
-  float: left; }
-  .photos .photo img {
-    display: block;
-    width: 100%; }
-
-/*** Docs *** */
-body.doc {
-  max-width: 640px; }
-
-.doc #content {
-  margin-bottom: 20px; }
-.doc a:hover {
-  border-bottom: 1px dotted; }
-
-body.doc {
-  margin-left: 220px; }
-
-.doc nav {
-  width: 210px;
-  position: fixed;
-  left: 10px;
-  top: 0px;
-  padding-top: 20px;
-  height: 100%;
-  overflow: auto; }
-  .doc nav h1 {
-    margin-top: 0; }
-    .doc nav h1 body.doc {
-      margin-left: 0px; }
-    .doc nav h1 .doc nav {
-      width: auto;
-      position: relative;
-      left: auto;
-      top: auto;
-      padding-top: 0px;
-      height: auto;
-      margin-bottom: 20px; }
-
-/*** Doc page nav *** */
-body.doc {
-  margin-left: 0px; }
-
-.doc nav {
-  width: auto;
-  position: relative;
-  left: auto;
-  top: auto;
-  padding-top: 0px;
-  height: auto;
-  margin-bottom: 20px; }
-
-/*** Doc page nav *** */
-#docs-nav h1 {
-  font-size: 19px;
-  margin-bottom: 0.5em; }
-  #docs-nav h1 a {
-    color: #44ffbb; }
-
-#demo-nav a {
-  color: #44ffbb; }
-
-#docs-nav h1 a:hover {
-  color: #44bbff; }
-
-#demo-nav {
-  font-size: 16px;
-  font-weight: bold;
-  padding-bottom: 0.5em;
-  margin-bottom: 0.5em;
-  border-bottom: 1px solid #333333; }
-  #demo-nav a:hover {
-    color: #44bbff; }
-
-#docs-nav ul {
-  list-style: none;
-  margin: 0;
-  font-weight: bold; }
-  #docs-nav ul a {
-    display: block;
-    border: none;
-    padding: 1px 5px; }
-  #docs-nav ul .current a {
-    background: rgba(0, 0, 0, 0.3);
-    color: #11bbff; }
-  #docs-nav ul a:hover {
-    color: white; }
-  #docs-nav ul .current a:hover {
-    color: white; }
-  #docs-nav ul .current .toc a {
-    font-size: 12px;
-    padding-left: 1.2em;
-    font-weight: normal; }
-
-/*** Doc content *** */
-.doc h2, .doc footer {
-  border-top: 1px solid #333333;
-  padding-top: 0.8em; }
-.doc h2:target {
-  padding: 10px;
-  background: white;
-  color: #222222; }
-.doc h3 {
-  color: #ffeecc;
-  background: rgba(191, 191, 191, 0.05);
-  padding: 2px 0.5em;
-  margin-bottom: 0.5em;
-  font-size: 1.15em; }
-.doc h4 {
-  margin-bottom: 0.5em;
-  font-size: 14px; }
-
-footer {
-  font-size: 12px;
-  border-top: 1px solid #333333;
-  padding-top: 0.8em; }
-
-pre {
-  padding: 10px;
-  background: black;
-  color: white; }
-
-code {
-  background: black;
-  color: white; }
-
-.doc #content code {
-  font-size: 12px; }
-.doc #content pre {
-  line-height: 1.6em; }
-
-h3#options {
-  padding-bottom: 0; }
-
-.option-def dl dt, .option-def dl dd {
-  float: left;
-  padding: 0 1.2em;
-  background: #161616;
-  line-height: 36px;
-  height: 36px; }
-.option-def dl.header dt, .option-def dl.header dd {
-  background: #444444; }
-.option-def dl .option-type {
-  font-size: 13px;
-  color: #aaaaaa;
-  font-style: italic; }
-.option-def dl dd {
-  border-left: 1px solid #222222; }
-
-/* Tagline */
-.doc .tagline {
-  font-size: 22px;
-  font-weight: 300; }
-.doc .as-is {
-  font-size: 95%; }
-.doc #commercial {
-  background: white;
-  padding: 10px;
-  font-size: 14px;
-  color: #1f1f1d; }
-  .doc #commercial a {
-    font-weight: bold; }
-
-/* as-is from MIT */
-/* Commercial license blurb */
-/*** Pygments *** */
-code .s1, code .s {
-  color: #78bd55; }
-code .mi, code .cp, code .kc {
-  color: #5298d4; }
-code .k {
-  color: #e39b79; }
-code .kd, code .na {
-  color: #a9d866; }
-code .p {
-  color: #eeddbb; }
-code .o {
-  color: #ff6633; }
-code .nb {
-  color: #aa97ac; }
-code .c, code .c1 {
-  color: #666666;
-  font-style: italic; }
-code .nt {
-  color: #a0c8fc; }
-code .nf {
-  color: #9ea8b8; }
-code .nc {
-  color: #a78352; }
-code .m {
-  color: #de8e50; }
-code .nd {
-  color: #9fad7e; }
-
-/* string */
-/*boolean */
-/* keyword */
-/* markup attribute */
-/* punctuation */
-/* operator */
-/* support */
-/* comment */
-/* Markup open tag */
-/* css id */
-/* CSS class */
-/* CSS value */
-/* CSS pseudo selector */
-#super-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 40px; }
-  #super-list li {
-    display: inline-block;
-    float: left;
-    font-size: 28px;
-    line-height: 1.2em;
-    margin: 2px;
-    font-weight: 300; }
-    #super-list li.feature {
-      background: #111111; }
-    #super-list li span {
-      display: block;
-      padding: 0.2em 0.5em; }
-    #super-list li a {
-      display: block;
-      padding: 0.2em 0.5em;
-      color: #222222; }
-    #super-list li.doc a {
-      background: #33ccff; }
-    #super-list li.demo a {
-      background: #ffcc33; }
-    #super-list li.link a {
-      background: #ee5588;
-      color: white; }
-    #super-list li a:hover {
-      background: white; }
-    #super-list li.link a:hover {
-      color: #222222; }
-  #super-list.masonry li {
-    width: 216px; }
-    #super-list.masonry li.feature, #super-list.masonry li.link {
-      width: 436px; }
-
-#infscr-loading {
-  position: fixed;
-  bottom: 30px;
-  left: 42%;
-  z-index: 99;
-  background: white;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  color: #222222;
-  font-size: 15px;
-  font-weight: bold;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px; }
-
-.external {
-  padding-right: 15px;
-  background: url("../images/icon_external.png") no-repeat right top; }
-
-.download {
-  padding-right: 15px;
-  background: url("../images/icon_download.png") no-repeat right top; }
-
-.clearfix {
-  zoom: 1; }
-  .clearfix:before {
-    content: "\0020";
-    display: block;
-    height: 0;
-    visibility: hidden; }
-  .clearfix:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    visibility: hidden;
+#container {
+  margin: 20px auto;
+  width: 100%;
+  border: 0px solid #666666;
+  padding: 0px; }
+  #container:after {
+    content: "";
+    display: table;
     clear: both; }
 
-footer {
-  width: 500px; }
-  footer a {
-    color: black; }
-
-ul.social_footer {
-  list-style: none;
-  display: inline; }
-  ul.social_footer li {
-    display: inline; }
-    ul.social_footer li a {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      z-index: 10;
-      -webkit-transition: -webkit-transform 0.4s ease-out;
-      -moz-transition: -moz-transform 0.4s ease-out;
-      transition: transform 0.4s ease-out; }
-      ul.social_footer li a:hover {
-        -webkit-transform: rotateZ(360deg);
-        -moz-transform: rotateZ(360deg);
-        transform: rotateZ(360deg); }
-
-* {
-  margin: 0;
-  padding: 0; }
-
-/*Style for external links */
-a.external {
-  background: url(../images/external_link.png) no-repeat top right;
-  padding: 0 20px 0 0; }
-
-body {
-  background: black;
-  font-family: Century Gothic, sans-serif;
-  font-size: 34px;
-  overflow-x: hidden; }
-
-.section {
-  margin: 0px;
-  height: 4000px;
-  width: 100%;
-  float: left;
-  /*text-shadow:1px 1px 2px #f0f0f0; */ }
-
-#social_contact {
-  z-index: 100;
-  overflow: auto;
-  overflow: -moz-scrollbars-none;
-  display: inline-block; }
-
-.section h1 h2 h3 {
-  font-size: 35px;
-  /*margin:20px 0px 0px 50px; */ }
-
-/*Home Sections Styles */
 #home {
   padding: 40px 0 0 50px; }
   #home.section h1 {
@@ -655,253 +313,91 @@ body {
     font-size: 30px;
     margin: 5px 0; }
   #home.section h5 {
+    margin-top: 10px;
     font-size: 24px; }
   #home.section p {
     margin: 20px 0px 0px 50px;
     width: 900px;
     font-size: 24px; }
+  @media (max-width: 550px) {
+    #home {
+      padding: 10px; } }
 
-#about p {
-  font-size: 20px;
-  margin: 20px 80px; }
-
-#work h3 {
-  color: #ccff00;
-  font-size: 20px; }
-#work #filters {
-  font-size: 14px;
-  padding: 0;
-  margin: 0;
-  display: block;
-  width: 500px;
-  margin: 5px auto; }
-  #work #filters li {
-    color: white;
-    font-size: 14px;
-    padding: 0;
-    margin: 0 5px;
-    display: block;
-    float: left; }
-    #work #filters li a {
-      padding: 5px;
-      border-radius: 5px; }
-
-#education ul, #resume ul, #contact ul {
-  font-size: 14px;
-  padding: 0;
-  margin: 0;
-  display: block;
-  list-style: circle; }
-
-#education ul li, #resume ul li, #contact ul li {
-  color: black;
-  font-size: 14px;
-  padding: 0;
-  margin: 0;
-  display: block;
-  float: none; }
-
-.black {
+#contact .contact-list li a:hover svg {
+  border-radius: 100%;
   color: white;
-  background: black url(../images/green_vert.jpg) repeat-x bottom left;
-  margin-top: 50px;
-  padding-top: 50px; }
+  fill: white;
+  transform: scale(1.25);
+  transition: background-color 0.5s, transform 0.5s ease-out; }
 
-.white {
-  color: black;
-  background: #98ff05 url(../images/black_vert2.jpg) repeat-x bottom left;
-  padding-top: 50px; }
-
-#navigation {
-  z-index: 100;
-  /*Clear fix */
-  overflow: auto;
-  overflow: -moz-scrollbars-none;
-  display: inline-block; }
-  #navigation ul li {
-    display: inline;
-    z-index: 100; }
-    #navigation ul li a {
-      z-index: 100;
-      color: white;
-      font-size: 20px; }
-      #navigation ul li a:hover {
-        color: #333333; }
-
-/*Social Networking Icon Styles */
-#container {
-  width: 960px;
-  margin: 0 auto; }
-
-ul {
-  margin: 0 auto;
+#contact .contact-list {
+  width: 460px;
   list-style: none;
-  font-size: 0px; }
+  margin: 20px auto; }
+  #contact .contact-list:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #contact .contact-list li {
+    margin-left: 10px;
+    width: 100px;
+    height: 100px;
+    float: left;
+    list-style: none; }
+    #contact .contact-list li.linkedin a svg {
+      fill: #0fa1ff; }
+    #contact .contact-list li.twitter a svg {
+      fill: #9900ff; }
+    #contact .contact-list li.email a svg {
+      fill: #ccff00; }
+    #contact .contact-list li.instagram a svg {
+      fill: #ff00cc; }
+    #contact .contact-list li a {
+      border-bottom: none; }
+    #contact .contact-list li svg {
+      width: 100%;
+      height: 100%;
+      fill: white; }
+  @media (max-width: 460px) {
+    #contact .contact-list {
+      width: 260px; } }
 
-#social {
-  margin: 0;
-  padding: 0;
-  z-index: 100; }
-  #social li a {
-    display: block;
-    display: block;
-    width: 30px;
-    height: 32px;
-    z-index: 100;
-    -webkit-transition: -webkit-transform 0.4s ease-out;
-    -moz-transition: -moz-transform 0.4s ease-out;
-    transition: transform 0.4s ease-out; }
-    #social li a:hover {
-      -webkit-transform: rotateZ(360deg);
-      -moz-transform: rotateZ(360deg);
-      transform: rotateZ(360deg); }
+body {
+  background: black;
+  font-family: Century Gothic, sans-serif; }
 
-/*Fixed Position Navigation Bar and Footer */
+.section {
+  min-height: 2000px;
+  width: 100%; }
+  .section:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .section.black {
+    color: white;
+    background: black url(../images/green_vert.jpg) repeat-x bottom left;
+    margin-top: 50px;
+    padding-top: 50px; }
+  .section.green {
+    color: black;
+    background: #98ff05 url(../images/black_vert2.jpg) repeat-x bottom left;
+    padding-top: 50px; }
+  .section h2.header {
+    text-align: center;
+    font-size: 40px; }
+
+#options {
+  padding-bottom: 1em; }
+  #options h3 {
+    margin-bottom: 0.2em; }
+  #options ul {
+    margin: 0;
+    list-style: none;
+    padding-left: 50px; }
+
 a {
-  color: white;
+  color: #0fa1ff;
+  border-bottom: 1px solid #0fa1ff;
   text-decoration: none; }
   a:hover {
-    text-decoration: underline; }
-
-.reference {
-  position: fixed;
-  left: 10px;
-  top: 10px;
-  font-size: 13px;
-  font-weight: bold;
-  z-index: 1000; }
-  .reference a {
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    padding-right: 20px; }
-    .reference a:hover {
-      color: #dddddd;
-      text-decoration: none; }
-
-.social_links {
-  position: fixed;
-  z-index: 100;
-  left: 10px;
-  bottom: 10px;
-  font-size: 13px;
-  font-weight: bold; }
-  .social_links a {
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    padding-right: 20px; }
-    .social_links a:hover {
-      color: #dddddd;
-      text-decoration: none; }
-
-ul#social li {
-  float: left; }
-
-.hide {
-  display: none !important; }
-
-#modal_curtain {
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.6);
-  z-index: 999;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: block; }
-
-.element {
-  cursor: pointer; }
-
-#modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-left: -250px;
-  margin-top: -250px;
-  width: 500px;
-  height: 500px;
-  background: white;
-  z-index: 1000;
-  display: block; }
-  #modal #modal_toolbar {
-    height: 25px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.8); }
-    #modal #modal_toolbar h2 {
-      font-size: 18px;
-      position: absolute;
-      text-align: center;
-      top: 0;
-      z-index: 2000; }
-    #modal #modal_toolbar #modal_close {
-      width: 25px;
-      height: 25px;
-      background: url("../images/icon_close.png") no-repeat;
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      z-index: 2000;
-      cursor: pointer; }
-  #modal #modal_buttons {
-    height: 23px;
-    position: absolute;
-    top: 200px;
-    z-index: 2000;
-    width: 100%; }
-    #modal #modal_buttons #modal_buttons_previous {
-      cursor: pointer;
-      width: 50px;
-      height: 50px;
-      background: url("../images/icon_arrow_left.png") no-repeat;
-      float: left; }
-    #modal #modal_buttons #modal_buttons_next {
-      cursor: pointer;
-      width: 50px;
-      height: 50px;
-      background: url("../images/icon_arrow_right.png") no-repeat;
-      float: right; }
-  #modal #modal_slides {
-    overflow: hidden;
-    position: relative;
-    width: 500px;
-    height: 500px;
-    display: block;
-    background: black;
-    z-index: 1999; }
-    #modal #modal_slides ul {
-      position: relative;
-      left: 0;
-      top: 0;
-      height: 500px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      width: 5000px; }
-      #modal #modal_slides ul li {
-        position: relative;
-        font-size: 20px;
-        float: left;
-        width: 500px;
-        height: 500px;
-        overflow: hidden; }
-        #modal #modal_slides ul li img {
-          width: 100%; }
-        #modal #modal_slides ul li .modal_slide_description {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          height: 90px;
-          background: rgba(255, 255, 255, 0.5); }
-          #modal #modal_slides ul li .modal_slide_description p {
-            font-size: 14px; }
-
-.element.web {
-  background: #9900ff; }
-.element.app {
-  background: #ff00cc; }
-.element.research {
-  background: #ccff00; }
-
-/*The isotope Container */
-#container {
-  width: 100%; }
+    border-bottom-color: transparent; }
