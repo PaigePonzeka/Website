@@ -410,7 +410,6 @@
    */
   WorkTiles.prototype.bindElementAction = function() {
     var self = this;
-    console.log("BIND ELEMENT");
     this.$container.on('click', '.element', function() {
       var $this = $(this);
       var $carousel = $this.find('.js-carousel');
