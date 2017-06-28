@@ -317,6 +317,18 @@
           'career'
         ],
         layout: 'square'
+      },
+      {
+        name: 'Toastmasters',
+        description: 'I helped found and create a company wide Public Speaking Club at the Yext Offices. I current reside as the president.',
+        link: 'http://toastmasters.com',
+        images: [
+          './toastmasters/1.png'
+        ],
+        tags: [
+          'career'
+        ],
+        layout: 'square'
       }
   ]};
 
