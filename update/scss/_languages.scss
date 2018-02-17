@@ -1,0 +1,13 @@
+.language-icon {
+  width: 100px;
+  color: $secondary;
+  text-align: center;
+
+  i {
+    font-size: 50px;
+  }
+
+  &:hover i {
+    color: $primary;
+  }
+}
